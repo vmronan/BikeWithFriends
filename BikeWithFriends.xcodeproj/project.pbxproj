@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87A568A91AB2457C0032D26F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568A81AB2457C0032D26F /* main.m */; };
+		87A568AC1AB2457C0032D26F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568AB1AB2457C0032D26F /* AppDelegate.m */; };
+		87A568AF1AB2457C0032D26F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568AE1AB2457C0032D26F /* ViewController.m */; };
+		87A568B21AB2457C0032D26F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A568B01AB2457C0032D26F /* Main.storyboard */; };
+		87A568B41AB2457C0032D26F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A568B31AB2457C0032D26F /* Images.xcassets */; };
+		87A568B71AB2457C0032D26F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A568B51AB2457C0032D26F /* LaunchScreen.xib */; };
+		87A568C31AB2457D0032D26F /* BikeWithFriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568C21AB2457D0032D26F /* BikeWithFriendsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87A568BD1AB2457D0032D26F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A5689B1AB2457C0032D26F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87A568A21AB2457C0032D26F;
+			remoteInfo = BikeWithFriends;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87A568A31AB2457C0032D26F /* BikeWithFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeWithFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A568A71AB2457C0032D26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A568A81AB2457C0032D26F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87A568AA1AB2457C0032D26F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		87A568AB1AB2457C0032D26F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87A568AD1AB2457C0032D26F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		87A568AE1AB2457C0032D26F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		87A568B11AB2457C0032D26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87A568B31AB2457C0032D26F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		87A568B61AB2457C0032D26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		87A568BC1AB2457D0032D26F /* BikeWithFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeWithFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A568C11AB2457D0032D26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A568C21AB2457D0032D26F /* BikeWithFriendsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BikeWithFriendsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87A568A01AB2457C0032D26F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A568B91AB2457D0032D26F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87A5689A1AB2457C0032D26F = {
+			isa = PBXGroup;
+			children = (
+				87A568A51AB2457C0032D26F /* BikeWithFriends */,
+				87A568BF1AB2457D0032D26F /* BikeWithFriendsTests */,
+				87A568A41AB2457C0032D26F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87A568A41AB2457C0032D26F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87A568A31AB2457C0032D26F /* BikeWithFriends.app */,
+				87A568BC1AB2457D0032D26F /* BikeWithFriendsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87A568A51AB2457C0032D26F /* BikeWithFriends */ = {
+			isa = PBXGroup;
+			children = (
+				87A568AA1AB2457C0032D26F /* AppDelegate.h */,
+				87A568AB1AB2457C0032D26F /* AppDelegate.m */,
+				87A568AD1AB2457C0032D26F /* ViewController.h */,
+				87A568AE1AB2457C0032D26F /* ViewController.m */,
+				87A568B01AB2457C0032D26F /* Main.storyboard */,
+				87A568B31AB2457C0032D26F /* Images.xcassets */,
+				87A568B51AB2457C0032D26F /* LaunchScreen.xib */,
+				87A568A61AB2457C0032D26F /* Supporting Files */,
+			);
+			path = BikeWithFriends;
+			sourceTree = "<group>";
+		};
+		87A568A61AB2457C0032D26F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87A568A71AB2457C0032D26F /* Info.plist */,
+				87A568A81AB2457C0032D26F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87A568BF1AB2457D0032D26F /* BikeWithFriendsTests */ = {
+			isa = PBXGroup;
+			children = (
+				87A568C21AB2457D0032D26F /* BikeWithFriendsTests.m */,
+				87A568C01AB2457D0032D26F /* Supporting Files */,
+			);
+			path = BikeWithFriendsTests;
+			sourceTree = "<group>";
+		};
+		87A568C01AB2457D0032D26F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87A568C11AB2457D0032D26F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87A568A21AB2457C0032D26F /* BikeWithFriends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A568C61AB2457D0032D26F /* Build configuration list for PBXNativeTarget "BikeWithFriends" */;
+			buildPhases = (
+				87A5689F1AB2457C0032D26F /* Sources */,
+				87A568A01AB2457C0032D26F /* Frameworks */,
+				87A568A11AB2457C0032D26F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikeWithFriends;
+			productName = BikeWithFriends;
+			productReference = 87A568A31AB2457C0032D26F /* BikeWithFriends.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87A568BB1AB2457D0032D26F /* BikeWithFriendsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A568C91AB2457D0032D26F /* Build configuration list for PBXNativeTarget "BikeWithFriendsTests" */;
+			buildPhases = (
+				87A568B81AB2457D0032D26F /* Sources */,
+				87A568B91AB2457D0032D26F /* Frameworks */,
+				87A568BA1AB2457D0032D26F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87A568BE1AB2457D0032D26F /* PBXTargetDependency */,
+			);
+			name = BikeWithFriendsTests;
+			productName = BikeWithFriendsTests;
+			productReference = 87A568BC1AB2457D0032D26F /* BikeWithFriendsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87A5689B1AB2457C0032D26F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Jenner Felton, Vanessa Ronan, Sarah Trisorus";
+				TargetAttributes = {
+					87A568A21AB2457C0032D26F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					87A568BB1AB2457D0032D26F = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 87A568A21AB2457C0032D26F;
+					};
+				};
+			};
+			buildConfigurationList = 87A5689E1AB2457C0032D26F /* Build configuration list for PBXProject "BikeWithFriends" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87A5689A1AB2457C0032D26F;
+			productRefGroup = 87A568A41AB2457C0032D26F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87A568A21AB2457C0032D26F /* BikeWithFriends */,
+				87A568BB1AB2457D0032D26F /* BikeWithFriendsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87A568A11AB2457C0032D26F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A568B21AB2457C0032D26F /* Main.storyboard in Resources */,
+				87A568B71AB2457C0032D26F /* LaunchScreen.xib in Resources */,
+				87A568B41AB2457C0032D26F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A568BA1AB2457D0032D26F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87A5689F1AB2457C0032D26F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A568AF1AB2457C0032D26F /* ViewController.m in Sources */,
+				87A568AC1AB2457C0032D26F /* AppDelegate.m in Sources */,
+				87A568A91AB2457C0032D26F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A568B81AB2457D0032D26F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A568C31AB2457D0032D26F /* BikeWithFriendsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87A568BE1AB2457D0032D26F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87A568A21AB2457C0032D26F /* BikeWithFriends */;
+			targetProxy = 87A568BD1AB2457D0032D26F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87A568B01AB2457C0032D26F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A568B11AB2457C0032D26F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87A568B51AB2457C0032D26F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A568B61AB2457C0032D26F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87A568C41AB2457D0032D26F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		87A568C51AB2457D0032D26F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87A568C71AB2457D0032D26F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BikeWithFriends/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		87A568C81AB2457D0032D26F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BikeWithFriends/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		87A568CA1AB2457D0032D26F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BikeWithFriendsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikeWithFriends.app/BikeWithFriends";
+			};
+			name = Debug;
+		};
+		87A568CB1AB2457D0032D26F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BikeWithFriendsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikeWithFriends.app/BikeWithFriends";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87A5689E1AB2457C0032D26F /* Build configuration list for PBXProject "BikeWithFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A568C41AB2457D0032D26F /* Debug */,
+				87A568C51AB2457D0032D26F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A568C61AB2457D0032D26F /* Build configuration list for PBXNativeTarget "BikeWithFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A568C71AB2457D0032D26F /* Debug */,
+				87A568C81AB2457D0032D26F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		87A568C91AB2457D0032D26F /* Build configuration list for PBXNativeTarget "BikeWithFriendsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A568CA1AB2457D0032D26F /* Debug */,
+				87A568CB1AB2457D0032D26F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87A5689B1AB2457C0032D26F /* Project object */;
+}
