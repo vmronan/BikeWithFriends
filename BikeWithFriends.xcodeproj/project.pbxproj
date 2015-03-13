@@ -9,11 +9,23 @@
 /* Begin PBXBuildFile section */
 		87A568A91AB2457C0032D26F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568A81AB2457C0032D26F /* main.m */; };
 		87A568AC1AB2457C0032D26F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568AB1AB2457C0032D26F /* AppDelegate.m */; };
-		87A568AF1AB2457C0032D26F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568AE1AB2457C0032D26F /* ViewController.m */; };
+		87A568AF1AB2457C0032D26F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568AE1AB2457C0032D26F /* MainViewController.m */; };
 		87A568B21AB2457C0032D26F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A568B01AB2457C0032D26F /* Main.storyboard */; };
 		87A568B41AB2457C0032D26F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A568B31AB2457C0032D26F /* Images.xcassets */; };
 		87A568B71AB2457C0032D26F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A568B51AB2457C0032D26F /* LaunchScreen.xib */; };
 		87A568C31AB2457D0032D26F /* BikeWithFriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568C21AB2457D0032D26F /* BikeWithFriendsTests.m */; };
+		87A568D21AB250970032D26F /* AchievementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568D11AB250970032D26F /* AchievementsViewController.m */; };
+		87A568D51AB250A50032D26F /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568D41AB250A50032D26F /* StatisticsViewController.m */; };
+		87A568D81AB250AD0032D26F /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568D71AB250AD0032D26F /* NotificationsViewController.m */; };
+		87A568DB1AB250B60032D26F /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568DA1AB250B60032D26F /* FriendsViewController.m */; };
+		87A568DE1AB250C00032D26F /* BikingProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568DD1AB250C00032D26F /* BikingProgressViewController.m */; };
+		87A568E11AB250EA0032D26F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568E01AB250EA0032D26F /* LoginViewController.m */; };
+		87A568EB1AB2517D0032D26F /* Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568EA1AB2517D0032D26F /* Friends.m */; };
+		87A568EE1AB2518D0032D26F /* Rides.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568ED1AB2518D0032D26F /* Rides.m */; };
+		87A568F21AB289740032D26F /* FriendsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F11AB289740032D26F /* FriendsListView.m */; };
+		87A568F51AB289820032D26F /* RequestSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F41AB289820032D26F /* RequestSetupView.m */; };
+		87A568F81AB28F370032D26F /* AddFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F71AB28F370032D26F /* AddFriendsView.m */; };
+		87A568FB1AB290A40032D26F /* LogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568FA1AB290A40032D26F /* LogsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +44,39 @@
 		87A568A81AB2457C0032D26F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		87A568AA1AB2457C0032D26F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87A568AB1AB2457C0032D26F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		87A568AD1AB2457C0032D26F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		87A568AE1AB2457C0032D26F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		87A568AD1AB2457C0032D26F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		87A568AE1AB2457C0032D26F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		87A568B11AB2457C0032D26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87A568B31AB2457C0032D26F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		87A568B61AB2457C0032D26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		87A568BC1AB2457D0032D26F /* BikeWithFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeWithFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A568C11AB2457D0032D26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A568C21AB2457D0032D26F /* BikeWithFriendsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BikeWithFriendsTests.m; sourceTree = "<group>"; };
+		87A568D01AB250970032D26F /* AchievementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsViewController.h; sourceTree = "<group>"; };
+		87A568D11AB250970032D26F /* AchievementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsViewController.m; sourceTree = "<group>"; };
+		87A568D31AB250A50032D26F /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		87A568D41AB250A50032D26F /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		87A568D61AB250AD0032D26F /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		87A568D71AB250AD0032D26F /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
+		87A568D91AB250B60032D26F /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		87A568DA1AB250B60032D26F /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		87A568DC1AB250C00032D26F /* BikingProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikingProgressViewController.h; sourceTree = "<group>"; };
+		87A568DD1AB250C00032D26F /* BikingProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikingProgressViewController.m; sourceTree = "<group>"; };
+		87A568DF1AB250EA0032D26F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		87A568E01AB250EA0032D26F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		87A568E91AB2517D0032D26F /* Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friends.h; sourceTree = "<group>"; };
+		87A568EA1AB2517D0032D26F /* Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friends.m; sourceTree = "<group>"; };
+		87A568EC1AB2518D0032D26F /* Rides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rides.h; sourceTree = "<group>"; };
+		87A568ED1AB2518D0032D26F /* Rides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rides.m; sourceTree = "<group>"; };
+		87A568EF1AB251A20032D26F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		87A568F01AB289740032D26F /* FriendsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListView.h; sourceTree = "<group>"; };
+		87A568F11AB289740032D26F /* FriendsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListView.m; sourceTree = "<group>"; };
+		87A568F31AB289820032D26F /* RequestSetupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestSetupView.h; sourceTree = "<group>"; };
+		87A568F41AB289820032D26F /* RequestSetupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestSetupView.m; sourceTree = "<group>"; };
+		87A568F61AB28F370032D26F /* AddFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendsView.h; sourceTree = "<group>"; };
+		87A568F71AB28F370032D26F /* AddFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendsView.m; sourceTree = "<group>"; };
+		87A568F91AB290A40032D26F /* LogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogsViewController.h; sourceTree = "<group>"; };
+		87A568FA1AB290A40032D26F /* LogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +118,10 @@
 		87A568A51AB2457C0032D26F /* BikeWithFriends */ = {
 			isa = PBXGroup;
 			children = (
-				87A568AA1AB2457C0032D26F /* AppDelegate.h */,
-				87A568AB1AB2457C0032D26F /* AppDelegate.m */,
-				87A568AD1AB2457C0032D26F /* ViewController.h */,
-				87A568AE1AB2457C0032D26F /* ViewController.m */,
+				87A568CC1AB24C610032D26F /* App Delegate */,
+				87A568CE1AB24C6C0032D26F /* Models */,
+				87A568CD1AB24C660032D26F /* View Controllers */,
+				87A568CF1AB24C6F0032D26F /* Tools */,
 				87A568B01AB2457C0032D26F /* Main.storyboard */,
 				87A568B31AB2457C0032D26F /* Images.xcassets */,
 				87A568B51AB2457C0032D26F /* LaunchScreen.xib */,
@@ -117,6 +154,119 @@
 				87A568C11AB2457D0032D26F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87A568CC1AB24C610032D26F /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				87A568AA1AB2457C0032D26F /* AppDelegate.h */,
+				87A568AB1AB2457C0032D26F /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		87A568CD1AB24C660032D26F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87A568E21AB250F40032D26F /* Login */,
+				87A568E31AB251020032D26F /* Main Screen */,
+				87A568E81AB251310032D26F /* Biking Progress */,
+				87A568E51AB251170032D26F /* Notifications */,
+				87A568E61AB2511B0032D26F /* Friends */,
+				87A568E71AB2512D0032D26F /* Statistics */,
+				87A568E41AB251130032D26F /* Achievements */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		87A568CE1AB24C6C0032D26F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87A568E91AB2517D0032D26F /* Friends.h */,
+				87A568EA1AB2517D0032D26F /* Friends.m */,
+				87A568EC1AB2518D0032D26F /* Rides.h */,
+				87A568ED1AB2518D0032D26F /* Rides.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		87A568CF1AB24C6F0032D26F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				87A568EF1AB251A20032D26F /* Constants.h */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		87A568E21AB250F40032D26F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				87A568DF1AB250EA0032D26F /* LoginViewController.h */,
+				87A568E01AB250EA0032D26F /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		87A568E31AB251020032D26F /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				87A568AD1AB2457C0032D26F /* MainViewController.h */,
+				87A568AE1AB2457C0032D26F /* MainViewController.m */,
+			);
+			name = "Main Screen";
+			sourceTree = "<group>";
+		};
+		87A568E41AB251130032D26F /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				87A568D01AB250970032D26F /* AchievementsViewController.h */,
+				87A568D11AB250970032D26F /* AchievementsViewController.m */,
+			);
+			name = Achievements;
+			sourceTree = "<group>";
+		};
+		87A568E51AB251170032D26F /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				87A568D61AB250AD0032D26F /* NotificationsViewController.h */,
+				87A568D71AB250AD0032D26F /* NotificationsViewController.m */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
+		87A568E61AB2511B0032D26F /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				87A568D91AB250B60032D26F /* FriendsViewController.h */,
+				87A568DA1AB250B60032D26F /* FriendsViewController.m */,
+				87A568F61AB28F370032D26F /* AddFriendsView.h */,
+				87A568F71AB28F370032D26F /* AddFriendsView.m */,
+				87A568F01AB289740032D26F /* FriendsListView.h */,
+				87A568F11AB289740032D26F /* FriendsListView.m */,
+				87A568F31AB289820032D26F /* RequestSetupView.h */,
+				87A568F41AB289820032D26F /* RequestSetupView.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		87A568E71AB2512D0032D26F /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				87A568D31AB250A50032D26F /* StatisticsViewController.h */,
+				87A568D41AB250A50032D26F /* StatisticsViewController.m */,
+				87A568F91AB290A40032D26F /* LogsViewController.h */,
+				87A568FA1AB290A40032D26F /* LogsViewController.m */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		87A568E81AB251310032D26F /* Biking Progress */ = {
+			isa = PBXGroup;
+			children = (
+				87A568DC1AB250C00032D26F /* BikingProgressViewController.h */,
+				87A568DD1AB250C00032D26F /* BikingProgressViewController.m */,
+			);
+			name = "Biking Progress";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +369,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87A568AF1AB2457C0032D26F /* ViewController.m in Sources */,
+				87A568F51AB289820032D26F /* RequestSetupView.m in Sources */,
+				87A568D51AB250A50032D26F /* StatisticsViewController.m in Sources */,
+				87A568F81AB28F370032D26F /* AddFriendsView.m in Sources */,
+				87A568DE1AB250C00032D26F /* BikingProgressViewController.m in Sources */,
+				87A568F21AB289740032D26F /* FriendsListView.m in Sources */,
+				87A568AF1AB2457C0032D26F /* MainViewController.m in Sources */,
+				87A568EB1AB2517D0032D26F /* Friends.m in Sources */,
+				87A568DB1AB250B60032D26F /* FriendsViewController.m in Sources */,
 				87A568AC1AB2457C0032D26F /* AppDelegate.m in Sources */,
+				87A568E11AB250EA0032D26F /* LoginViewController.m in Sources */,
+				87A568EE1AB2518D0032D26F /* Rides.m in Sources */,
+				87A568FB1AB290A40032D26F /* LogsViewController.m in Sources */,
+				87A568D21AB250970032D26F /* AchievementsViewController.m in Sources */,
 				87A568A91AB2457C0032D26F /* main.m in Sources */,
+				87A568D81AB250AD0032D26F /* NotificationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +574,7 @@
 				87A568C81AB2457D0032D26F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87A568C91AB2457D0032D26F /* Build configuration list for PBXNativeTarget "BikeWithFriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +583,7 @@
 				87A568CB1AB2457D0032D26F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
