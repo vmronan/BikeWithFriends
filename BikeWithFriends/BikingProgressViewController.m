@@ -99,6 +99,13 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
+        
+        // send ride data to MainViewController
+        if(_delegate && [_delegate respondsToSelector:@selector(bikingProgressDidDismissWithData:)])
+        {
+            [_delegate bikingProgressDidDismissWithData:self.ride];
+        }
+        
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
@@ -121,7 +128,7 @@
     [self.timer invalidate];
     
     // Save the ride data
-    
+    self.ride = [[Rides alloc] initWithDistance:distance rideSpeed:speed rideTime:rideTime dateOfRide:[NSDate date]];
     
     // Display the alert box
     [self showAlertView];

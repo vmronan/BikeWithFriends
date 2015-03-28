@@ -77,6 +77,7 @@
 		87A568F71AB28F370032D26F /* AddFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendsView.m; sourceTree = "<group>"; };
 		87A568F91AB290A40032D26F /* LogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogsViewController.h; sourceTree = "<group>"; };
 		87A568FA1AB290A40032D26F /* LogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogsViewController.m; sourceTree = "<group>"; };
+		E97F5DE21AC67E69003969E9 /* BikingProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikingProgressDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +266,7 @@
 			children = (
 				87A568DC1AB250C00032D26F /* BikingProgressViewController.h */,
 				87A568DD1AB250C00032D26F /* BikingProgressViewController.m */,
+				E97F5DE21AC67E69003969E9 /* BikingProgressDelegate.h */,
 			);
 			name = "Biking Progress";
 			sourceTree = "<group>";
