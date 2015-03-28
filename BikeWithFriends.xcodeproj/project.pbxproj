@@ -122,9 +122,6 @@
 				87A568CE1AB24C6C0032D26F /* Models */,
 				87A568CD1AB24C660032D26F /* View Controllers */,
 				87A568CF1AB24C6F0032D26F /* Tools */,
-				87A568B01AB2457C0032D26F /* Main.storyboard */,
-				87A568B31AB2457C0032D26F /* Images.xcassets */,
-				87A568B51AB2457C0032D26F /* LaunchScreen.xib */,
 				87A568A61AB2457C0032D26F /* Supporting Files */,
 			);
 			path = BikeWithFriends;
@@ -193,6 +190,9 @@
 		87A568CF1AB24C6F0032D26F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				87A568B01AB2457C0032D26F /* Main.storyboard */,
+				87A568B31AB2457C0032D26F /* Images.xcassets */,
+				87A568B51AB2457C0032D26F /* LaunchScreen.xib */,
 				87A568EF1AB251A20032D26F /* Constants.h */,
 			);
 			name = Tools;
@@ -332,6 +332,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 87A5689A1AB2457C0032D26F;
 			productRefGroup = 87A568A41AB2457C0032D26F /* Products */;
@@ -505,6 +506,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BikeWithFriends/FacebookSDK",
+				);
 				INFOPLIST_FILE = BikeWithFriends/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,6 +520,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BikeWithFriends/FacebookSDK",
+				);
 				INFOPLIST_FILE = BikeWithFriends/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

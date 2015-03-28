@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Rides.h"
 
 @interface MainViewController : UIViewController
 
@@ -16,6 +17,8 @@
 @property (strong, nonatomic) UIButton *statisticsButton;
 @property (strong, nonatomic) UIButton *achievementsButton;
 
+// Ride list for logs (may remove)
+@property(strong) NSMutableArray *rides;
 
 @end
 

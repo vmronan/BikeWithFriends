@@ -117,4 +117,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+// TODO
+- (NSMutableArray*)createLogs {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"rides.txt"];
+    
+    NSMutableArray *myObject=[NSMutableArray array];
+    //[Rides addObject:self.];
+    
+    [NSKeyedArchiver archiveRootObject:myObject toFile:appFile];
+    
+    NSMutableArray* ridesArray = [NSKeyedUnarchiver unarchiveObjectWithFile:appFile];
+    
+    return ridesArray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
