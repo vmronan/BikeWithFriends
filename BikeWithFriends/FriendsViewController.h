@@ -10,7 +10,7 @@
 #import "FriendsListView.h"
 #import "RequestSetupView.h"
 
-@interface FriendsViewController : UIViewController
+@interface FriendsViewController : UIViewController <RequestSetupProtocol>
 
 @property (strong, nonatomic) FriendsListView *friendsListView;
 @property (strong, nonatomic) RequestSetupView *requestSetupView;

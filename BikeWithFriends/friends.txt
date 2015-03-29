@@ -1,0 +1,4 @@
+Jim/20
+George/10
+Sam/2
+Vanessa/15

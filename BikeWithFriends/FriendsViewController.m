@@ -47,12 +47,14 @@
     
     // Show view
     [self setTitle:@"Send Ride Request"];
-    self.requestSetupView = [[RequestSetupView alloc] initWithFrame:self.view.frame target:self sendRequestAction:@selector(sendRequest)];
+    self.requestSetupView = [[RequestSetupView alloc] initWithFrame:self.view.frame];
+    self.requestSetupView.delegate = self;
     [self setView:self.requestSetupView];
 }
 
-- (void)sendRequest {
-    // Send request data
+- (void)sendRequestForTime:(NSDate *)datetime atPlace:(NSString *)where withNotes:(NSString *)notes {
+  NSLog(@"Request sent");
+    // TODO: Save request data somewhere
     
     // Pop this view controller to return to home screen
     [self.navigationController popViewControllerAnimated:YES];
