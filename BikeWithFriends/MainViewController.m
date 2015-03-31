@@ -84,7 +84,7 @@
 }
 
 - (void)slideSidebarOut {
-    
+    // To do
 }
 
 /**************************************
@@ -124,9 +124,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/**************************************
- METHODS TO HANDLE RIDES
- **************************************/
+
+/*****************************
+    METHODS TO HANDLE RIDES
+ *****************************/
 
 // delegate method
 - (void)bikingProgressDidDismissWithData: (Rides*)ride {
@@ -157,17 +158,5 @@
     
     return ridesArray;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 @end
