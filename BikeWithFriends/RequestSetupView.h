@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RequestSetupView : UIView
+@protocol RequestSetupProtocol <NSObject>
+-(void)sendRequestForTime:(NSDate*)datetime atPlace:(NSString*)where withNotes:(NSString*)notes;
+@end
 
-@property id target;
-@property SEL sendRequestAction;
+@interface RequestSetupView : UIView <UITextFieldDelegate>
 
-- (id)initWithFrame:(CGRect)frame target:(id)target sendRequestAction:(SEL)action;
+@property (assign, nonatomic) id <RequestSetupProtocol> delegate;
+
+-(id)initWithFrame:(CGRect)frame;
 @end
