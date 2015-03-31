@@ -10,6 +10,6 @@
 
 @interface LogsViewController : UITableViewController
 
-@property(strong) NSMutableArray *rides;
+@property (strong) NSMutableArray *rides;
 
 @end
