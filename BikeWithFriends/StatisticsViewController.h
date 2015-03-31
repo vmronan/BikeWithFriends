@@ -12,5 +12,6 @@
 @interface StatisticsViewController : UIViewController
 
 @property (strong, nonatomic) LogsViewController *logsViewController;
+@property (strong, nonatomic) NSMutableArray *rides;
 
 @end

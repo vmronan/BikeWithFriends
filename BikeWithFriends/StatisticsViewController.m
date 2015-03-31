@@ -7,6 +7,7 @@
 //
 
 #import "StatisticsViewController.h"
+#import "Rides.h"
 
 @implementation StatisticsViewController
 
@@ -23,6 +24,7 @@
 
 - (void)pushLogsView {
     self.logsViewController = [[LogsViewController alloc] init];
+    self.logsViewController.rides = self.rides;
     [self.navigationController pushViewController:self.logsViewController animated:YES];
 }
 

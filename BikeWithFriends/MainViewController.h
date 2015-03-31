@@ -7,14 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Rides.h"
+#import "BikingProgressDelegate.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <BikingProgressDelegate>
 
 @property (strong, nonatomic) UIButton *startBikingButton;
 @property (strong, nonatomic) UIButton *notificationsButton;
 @property (strong, nonatomic) UIButton *friendsButton;
 @property (strong, nonatomic) UIButton *statisticsButton;
 @property (strong, nonatomic) UIButton *achievementsButton;
+
+// Ride list for logs (may remove)
+@property(strong) NSMutableArray *rides;
+
+- (void)bikingProgressDidDismissWithData: (Rides*)ride;
+
 
 
 @end

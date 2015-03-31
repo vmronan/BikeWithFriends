@@ -7,9 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Rides.h"
+#import "BikingProgressDelegate.h"
 
-@interface BikingProgressViewController : UIViewController
+@interface BikingProgressViewController : UIViewController {
+    int rideTime;
+    int minutes;
+    int seconds;
+    float speed;
+    float distance;
+    bool isPaused;
+}
 
+@property (strong, nonatomic) UIButton *pauseRideButton;
 @property (strong, nonatomic) UIButton *endRideButton;
+@property (strong, nonatomic) UILabel *timerLabel;
+@property (strong, nonatomic) UILabel *distanceLabel;
+@property (strong, nonatomic) UILabel *speedLabel;
+@property (strong, nonatomic) NSTimer *timer;
+
+@property (strong, nonatomic) Rides *ride;
+@property (nonatomic, weak) id<BikingProgressDelegate> delegate;
 
 @end

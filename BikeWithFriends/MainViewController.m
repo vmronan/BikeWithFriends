@@ -24,6 +24,10 @@
     [self setTitle:@"Bike with Friends"];
     [self showNavBarButtons];
     [self showButtons];
+    
+    if (self.rides == nil) {
+        [self createRides];
+    }
 }
 
 /***************************
@@ -89,6 +93,7 @@
 
 - (void)pushBikingProgressView {
     BikingProgressViewController *vc = [[BikingProgressViewController alloc] init];
+    vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -104,6 +109,7 @@
 
 - (void)pushStatisticsView {
     StatisticsViewController *vc = [[StatisticsViewController alloc] init];
+    vc.rides = self.rides;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -112,9 +118,56 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/**************************************
+ METHODS TO HANDLE RIDES
+ **************************************/
+
+// delegate method
+- (void)bikingProgressDidDismissWithData: (Rides*)ride {
+    [self.rides insertObject:ride atIndex:0];
+}
+
+// creates some fake rides
+- (void)createRides {
+    Rides *ride1 = [[Rides alloc] initWithDistance:2.0 rideSpeed:4.2 rideTime:200 dateOfRide:[NSDate date]];
+    Rides *ride2 = [[Rides alloc] initWithDistance:3.0 rideSpeed:5.2 rideTime:400 dateOfRide:[NSDate date]];
+    
+    self.rides = [NSMutableArray arrayWithObjects:ride1, ride2, nil];
+}
+
+
+// transcribes this data for later? hopefully?
+- (NSMutableArray*)createLogs {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"rides.txt"];
+    
+    NSMutableArray *myObject=[NSMutableArray array];
+    [self.rides addObject:myObject];
+    
+    [NSKeyedArchiver archiveRootObject:myObject toFile:appFile];
+    
+    NSMutableArray* ridesArray = [NSKeyedUnarchiver unarchiveObjectWithFile:appFile];
+    
+    return ridesArray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

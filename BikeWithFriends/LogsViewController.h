@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogsViewController : UIViewController
+@interface LogsViewController : UITableViewController
+
+@property(strong) NSMutableArray *rides;
 
 @end
