@@ -30,6 +30,12 @@
 		87A568F51AB289820032D26F /* RequestSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F41AB289820032D26F /* RequestSetupView.m */; };
 		87A568F81AB28F370032D26F /* AddFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F71AB28F370032D26F /* AddFriendsView.m */; };
 		87A568FB1AB290A40032D26F /* LogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568FA1AB290A40032D26F /* LogsViewController.m */; };
+		E9A2170E1ACCF3B0001DBF60 /* roadIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A2170D1ACCF3B0001DBF60 /* roadIcon.png */; };
+		E9A217101ACCFFBB001DBF60 /* speedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A2170F1ACCFFBB001DBF60 /* speedIcon.png */; };
+		E9A217121ACD0228001DBF60 /* timerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A217111ACD0228001DBF60 /* timerIcon.png */; };
+		E9A217141ACD0468001DBF60 /* pauseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A217131ACD0468001DBF60 /* pauseIcon.png */; };
+		E9A217161ACD05B6001DBF60 /* playIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A217151ACD05B6001DBF60 /* playIcon.png */; };
+		E9A217181ACD0630001DBF60 /* finishIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A217171ACD0630001DBF60 /* finishIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +93,12 @@
 		87A568F91AB290A40032D26F /* LogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogsViewController.h; sourceTree = "<group>"; };
 		87A568FA1AB290A40032D26F /* LogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogsViewController.m; sourceTree = "<group>"; };
 		E97F5DE21AC67E69003969E9 /* BikingProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikingProgressDelegate.h; sourceTree = "<group>"; };
+		E9A2170D1ACCF3B0001DBF60 /* roadIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roadIcon.png; sourceTree = "<group>"; };
+		E9A2170F1ACCFFBB001DBF60 /* speedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speedIcon.png; sourceTree = "<group>"; };
+		E9A217111ACD0228001DBF60 /* timerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timerIcon.png; sourceTree = "<group>"; };
+		E9A217131ACD0468001DBF60 /* pauseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseIcon.png; sourceTree = "<group>"; };
+		E9A217151ACD05B6001DBF60 /* playIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playIcon.png; sourceTree = "<group>"; };
+		E9A217171ACD0630001DBF60 /* finishIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finishIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +152,12 @@
 		87A568A61AB2457C0032D26F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9A217171ACD0630001DBF60 /* finishIcon.png */,
+				E9A217151ACD05B6001DBF60 /* playIcon.png */,
+				E9A217131ACD0468001DBF60 /* pauseIcon.png */,
+				E9A217111ACD0228001DBF60 /* timerIcon.png */,
+				E9A2170F1ACCFFBB001DBF60 /* speedIcon.png */,
+				E9A2170D1ACCF3B0001DBF60 /* roadIcon.png */,
 				8778C3441ACA82C100FE6D7C /* chart.png */,
 				87A568A71AB2457C0032D26F /* Info.plist */,
 				87A568A81AB2457C0032D26F /* main.m */,
@@ -366,10 +384,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A217161ACD05B6001DBF60 /* playIcon.png in Resources */,
 				264C66F91AC5176F009ED889 /* friends.txt in Resources */,
 				87A568B21AB2457C0032D26F /* Main.storyboard in Resources */,
+				E9A217141ACD0468001DBF60 /* pauseIcon.png in Resources */,
 				87A568B71AB2457C0032D26F /* LaunchScreen.xib in Resources */,
 				8778C3451ACA82C100FE6D7C /* chart.png in Resources */,
+				E9A217101ACCFFBB001DBF60 /* speedIcon.png in Resources */,
+				E9A217181ACD0630001DBF60 /* finishIcon.png in Resources */,
+				E9A217121ACD0228001DBF60 /* timerIcon.png in Resources */,
+				E9A2170E1ACCF3B0001DBF60 /* roadIcon.png in Resources */,
 				87A568B41AB2457C0032D26F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

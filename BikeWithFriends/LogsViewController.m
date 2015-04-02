@@ -61,7 +61,9 @@
     
     // set cell information
     cell.textLabel.text = [self relativeDateStringForDate:ride.dateOfRide];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Total distance: %.02f Average Speed: %.02f", ride.rideDistance, ride.rideSpeed];
+    float minutes = ride.rideTimeInSeconds / 60;
+    float seconds = ride.rideTimeInSeconds % 60;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Total Time:%2.f:%2.f Total distance:%.02f Average Speed:%.02f", minutes, seconds, ride.rideDistance, ride.rideSpeed];
     
     
     
