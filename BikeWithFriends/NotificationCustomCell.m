@@ -19,7 +19,6 @@
         // profile image
         self.profileImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 10, 50, 30)];
         [self.profileImage setContentMode: UIViewContentModeScaleToFill];
-        [self.profileImage setImage:[UIImage imageNamed:@"profileImage.jpg"]];
         
         // get the layer of this image view
         CALayer * l = [self.profileImage layer];
@@ -65,10 +64,9 @@
         else {
             
             // cancel button image
-            self.cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(270, 20, 100, 30)];
-            [self.cancelButton setImage:[UIImage imageNamed:@"cancelIcon.png"] forState: UIControlStateNormal];
+            self.cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(300, 20, 70, 30)];
+            [self.cancelButton setImage:[UIImage imageNamed:@"cancelButton.png"] forState: UIControlStateNormal];
             [self.cancelButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            [self.cancelButton addTarget:self action:@selector(cancelRideRequest) forControlEvents:UIControlEventTouchUpInside];
             [self addSubview:self.cancelButton];
         }
         

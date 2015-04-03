@@ -10,7 +10,7 @@
 
 @interface NotificationsViewController : UITableViewController
 
-
+@property (strong, nonatomic) NSMutableArray *cellType;
 @property (strong, nonatomic) NSMutableArray *notifications;
 @property (strong, nonatomic) NSMutableArray *descriptions;
 @property (strong, nonatomic) NSMutableArray *profilePictures;
