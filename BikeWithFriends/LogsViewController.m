@@ -9,10 +9,6 @@
 #import "LogsViewController.h"
 #import "Rides.h"
 
-@interface LogsViewController ()
-
-@end
-
 @implementation LogsViewController
 
 @synthesize rides = _rides;
@@ -25,7 +21,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.title = @"Ride Log";
 }
 
@@ -54,6 +49,7 @@
     // create new cell if necessary
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
 
     // get ride information for this cell
@@ -64,8 +60,6 @@
     float minutes = ride.rideTimeInSeconds / 60;
     float seconds = ride.rideTimeInSeconds % 60;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Total Time:%2.f:%2.f Total distance:%.02f Average Speed:%.02f", minutes, seconds, ride.rideDistance, ride.rideSpeed];
-    
-    
     
     return cell;
 }

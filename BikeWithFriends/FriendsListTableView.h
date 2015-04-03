@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Friends.h"
 
-@interface FriendsListView : UIView
+@interface FriendsListTableView : UITableViewController
 
 @property id target;
 @property SEL setupRequestAction;
+@property (strong, nonatomic) Friends *friends;
 
-- (id)initWithFrame:(CGRect)frame target:(id)target setupRequestAction:(SEL)action;
+- (id)initWithTarget:(id)target setupRequestAction:(SEL)action;
 
 @end

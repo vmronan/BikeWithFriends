@@ -1,42 +1,36 @@
 //
-//  NotificationsViewController.m
+//  FriendsListView.m
 //  BikeWithFriends
 //
 //  Created by Vanessa Ronan on 3/12/15.
 //  Copyright (c) 2015 Jenner Felton, Vanessa Ronan, Sarah Trisorus. All rights reserved.
 //
 
-#import "NotificationsViewController.h"
+#import "FriendsListTableView.h"
 
-@implementation NotificationsViewController
+@implementation FriendsListTableView
 
-- (instancetype)init {
+
+- (id)initWithTarget:(id)target setupRequestAction:(SEL)action {
     self = [super init];
     if(self) {
-        self.notifications = [NSMutableArray arrayWithArray:@[@"Sarah added you as a friend", @"Jenner wants to go biking with you at 4pm", @"Vanessa accepted your friend request"]];
+        self.target = target;
+        self.setupRequestAction = action;
+
+        // Get list of friends
+        self.friends = [[Friends alloc] init];
+        NSLog(@"friends #: %ld", (long)[self.friends getFriendCount]);
+        NSLog(@"friend 0: %@", [[self.friends getFriendWithId:0] getName]);
     }
     return self;
 }
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setTitle:@"Notifications"];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.notifications.count;
+    return [self.friends getFriendCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,7 +43,7 @@
     }
     
     // Set cell information
-    cell.textLabel.text = [self.notifications objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[self.friends getFriendWithId:(int)indexPath.row] getName];
     
     return cell;
 }
