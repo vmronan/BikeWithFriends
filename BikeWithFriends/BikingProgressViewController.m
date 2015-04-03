@@ -68,13 +68,13 @@
     [self.view addSubview:background];
     
     // add icon
-    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 4, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/4)];
+    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 4, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
     [icon setContentMode: UIViewContentModeScaleToFill];
     [icon setImage:[UIImage imageNamed:@"timerIcon.png"]];
     [background addSubview:icon];
     
     // add time
-    self.timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
+    self.timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/2.5, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
     [self.timerLabel setFont:[UIFont systemFontOfSize:46]];
     [self.timerLabel setText:@"00:00"];
     [background addSubview:self.timerLabel];

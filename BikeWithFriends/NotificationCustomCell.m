@@ -33,7 +33,7 @@
         [self addSubview:self.profileImage];
         
         // main label
-        self.mainLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 5, 200, 20)];
+        self.mainLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 5, 230, 20)];
         [self.mainLabel setNumberOfLines:0];
 
         self.mainLabel.textColor = [UIColor blackColor];
