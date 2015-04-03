@@ -17,7 +17,7 @@
 
 @implementation RequestSetupView
 
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame friend:(Friend *)friend {
     self = [super initWithFrame:frame];
   
     if(self) {
@@ -25,7 +25,7 @@
       NSInteger frameHeight = CGRectGetHeight(frame);
       
       // Create a label (when)
-      [self createLabelWithText:@"When do you want to meet with Vanessa?"
+        [self createLabelWithText:[NSString stringWithFormat:@"When do you want to meet with %@?", [friend getName]]
                       andOffset:frameHeight * 0.12];
       
       // Create a full-width date picker that takes up half the height

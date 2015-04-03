@@ -15,9 +15,8 @@
     if(self) {
         // Get list of friends
         self.friends = [[Friends alloc] init];
-        NSLog(@"friends #: %ld", (long)[self.friends getFriendCount]);
-        NSLog(@"friend 0: %@", [[self.friends getFriendWithId:0] getName]);
         
+        // Show tableview of friends
         self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
         [self.tableView setDataSource:self];
         [self.tableView setDelegate:self];
@@ -46,7 +45,6 @@
 
 - (void)showFriendsListView {
     [self setTitle:@"Friends"];
-    self.friendsListTableView = [[FriendsListTableView alloc] initWithTarget:self setupRequestAction:@selector(showRideRequestView)];
     [self setView:self.tableView];
     
     // Don't show cancel button if user cancels from ride request setup page
@@ -54,7 +52,7 @@
     [self showAddFriendsButton];
 }
 
-- (void)showRideRequestView {
+- (void)showRideRequestViewWithFriend:(Friend *)friend {
     // Change back button to cancel button
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(showFriendsListView)];
     [self.navigationItem setLeftBarButtonItem:cancelButton];
@@ -62,7 +60,7 @@
     
     // Show view
     [self setTitle:@"Send Ride Request"];
-    self.requestSetupView = [[RequestSetupView alloc] initWithFrame:self.view.frame];
+    self.requestSetupView = [[RequestSetupView alloc] initWithFrame:self.view.frame friend:friend];
     self.requestSetupView.delegate = self;
     [self setView:self.requestSetupView];
 }
@@ -74,6 +72,7 @@
     // Pop this view controller to return to home screen
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 /************************
     TABLE VIEW METHODS
@@ -100,6 +99,7 @@
     Friend *friend = [self.friends getFriendWithId:(int)indexPath.row];
     cell.textLabel.text = [friend getName];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Level %ld",(long)[friend getLevel]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
@@ -107,7 +107,9 @@
     return NO;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self showRideRequestViewWithFriend:[self.friends getFriendWithId:(int)indexPath.row]];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
