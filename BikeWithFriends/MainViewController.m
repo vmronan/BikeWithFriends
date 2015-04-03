@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Bike with Friends"];
-    [self showNavBarButtons];
+//    [self showNavBarButtons];
     [self showButtons];
     
     if (self.rides == nil) {

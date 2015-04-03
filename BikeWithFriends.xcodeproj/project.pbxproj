@@ -26,7 +26,7 @@
 		87A568E11AB250EA0032D26F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568E01AB250EA0032D26F /* LoginViewController.m */; };
 		87A568EB1AB2517D0032D26F /* Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568EA1AB2517D0032D26F /* Friends.m */; };
 		87A568EE1AB2518D0032D26F /* Rides.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568ED1AB2518D0032D26F /* Rides.m */; };
-		87A568F21AB289740032D26F /* FriendsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F11AB289740032D26F /* FriendsListView.m */; };
+		87A568F21AB289740032D26F /* FriendsListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F11AB289740032D26F /* FriendsListTableView.m */; };
 		87A568F51AB289820032D26F /* RequestSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F41AB289820032D26F /* RequestSetupView.m */; };
 		87A568F81AB28F370032D26F /* AddFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F71AB28F370032D26F /* AddFriendsView.m */; };
 		87A568FB1AB290A40032D26F /* LogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568FA1AB290A40032D26F /* LogsViewController.m */; };
@@ -78,8 +78,8 @@
 		87A568EC1AB2518D0032D26F /* Rides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rides.h; sourceTree = "<group>"; };
 		87A568ED1AB2518D0032D26F /* Rides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rides.m; sourceTree = "<group>"; };
 		87A568EF1AB251A20032D26F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		87A568F01AB289740032D26F /* FriendsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListView.h; sourceTree = "<group>"; };
-		87A568F11AB289740032D26F /* FriendsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListView.m; sourceTree = "<group>"; };
+		87A568F01AB289740032D26F /* FriendsListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableView.h; sourceTree = "<group>"; };
+		87A568F11AB289740032D26F /* FriendsListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableView.m; sourceTree = "<group>"; };
 		87A568F31AB289820032D26F /* RequestSetupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestSetupView.h; sourceTree = "<group>"; };
 		87A568F41AB289820032D26F /* RequestSetupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestSetupView.m; sourceTree = "<group>"; };
 		87A568F61AB28F370032D26F /* AddFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendsView.h; sourceTree = "<group>"; };
@@ -256,8 +256,8 @@
 				87A568DA1AB250B60032D26F /* FriendsViewController.m */,
 				87A568F61AB28F370032D26F /* AddFriendsView.h */,
 				87A568F71AB28F370032D26F /* AddFriendsView.m */,
-				87A568F01AB289740032D26F /* FriendsListView.h */,
-				87A568F11AB289740032D26F /* FriendsListView.m */,
+				87A568F01AB289740032D26F /* FriendsListTableView.h */,
+				87A568F11AB289740032D26F /* FriendsListTableView.m */,
 				87A568F31AB289820032D26F /* RequestSetupView.h */,
 				87A568F41AB289820032D26F /* RequestSetupView.m */,
 			);
@@ -392,7 +392,7 @@
 				87A568D51AB250A50032D26F /* StatisticsViewController.m in Sources */,
 				87A568F81AB28F370032D26F /* AddFriendsView.m in Sources */,
 				87A568DE1AB250C00032D26F /* BikingProgressViewController.m in Sources */,
-				87A568F21AB289740032D26F /* FriendsListView.m in Sources */,
+				87A568F21AB289740032D26F /* FriendsListTableView.m in Sources */,
 				87A568AF1AB2457C0032D26F /* MainViewController.m in Sources */,
 				87A568EB1AB2517D0032D26F /* Friends.m in Sources */,
 				87A568DB1AB250B60032D26F /* FriendsViewController.m in Sources */,

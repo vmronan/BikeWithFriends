@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FriendsListView.h"
+#import "FriendsListTableView.h"
 #import "RequestSetupView.h"
+#import "Friends.h"
+#import "Friend.h"
 
-@interface FriendsViewController : UIViewController <RequestSetupProtocol>
+@interface FriendsViewController : UIViewController <RequestSetupProtocol, UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) FriendsListView *friendsListView;
+@property (strong, nonatomic) FriendsListTableView *friendsListTableView;
 @property (strong, nonatomic) RequestSetupView *requestSetupView;
+@property (strong, nonatomic) Friends *friends;
+@property (strong, nonatomic) UITableView *tableView;
 
 @end

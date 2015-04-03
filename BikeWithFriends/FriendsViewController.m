@@ -10,6 +10,21 @@
 
 @implementation FriendsViewController
 
+- (instancetype)init {
+    self = [super init];
+    if(self) {
+        // Get list of friends
+        self.friends = [[Friends alloc] init];
+        NSLog(@"friends #: %ld", (long)[self.friends getFriendCount]);
+        NSLog(@"friend 0: %@", [[self.friends getFriendWithId:0] getName]);
+        
+        self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+        [self.tableView setDataSource:self];
+        [self.tableView setDelegate:self];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self showAddFriendsButton];
@@ -31,8 +46,8 @@
 
 - (void)showFriendsListView {
     [self setTitle:@"Friends"];
-    self.friendsListView = [[FriendsListView alloc] initWithFrame:self.view.frame target:self setupRequestAction:@selector(showRideRequestView)];
-    [self setView:self.friendsListView];
+    self.friendsListTableView = [[FriendsListTableView alloc] initWithTarget:self setupRequestAction:@selector(showRideRequestView)];
+    [self setView:self.tableView];
     
     // Don't show cancel button if user cancels from ride request setup page
     [self.navigationItem setLeftBarButtonItem:nil];
@@ -59,6 +74,40 @@
     // Pop this view controller to return to home screen
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+/************************
+    TABLE VIEW METHODS
+ ************************/
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.friends getFriendCount];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    // Create new cell if necessary
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    }
+    
+    // Set cell information
+    Friend *friend = [self.friends getFriendWithId:(int)indexPath.row];
+    cell.textLabel.text = [friend getName];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Level %ld",(long)[friend getLevel]];
+    return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
