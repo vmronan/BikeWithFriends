@@ -95,11 +95,20 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
-    // Set cell information
+    // Show friend's name, level, and photo
     Friend *friend = [self.friends getFriendWithId:(int)indexPath.row];
     cell.textLabel.text = [friend getName];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Level %ld",(long)[friend getLevel]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"person-%@.jpg", [[friend getName] lowercaseString] ]];
+    
+    // Show bike icon on right of cell
+    cell.accessoryType = UITableViewCellAccessoryDetailButton;
+    if (self.bikeImage == nil) {
+        self.bikeImage = [UIImage imageNamed:@"bike-icon.png"];
+    }
+    
+    cell.accessoryView = (UIView *)[[UIImageView alloc] initWithImage:self.bikeImage];
+    [cell.accessoryView setFrame:CGRectMake(0, 0, 32, 20)];
     return cell;
 }
 

@@ -19,6 +19,8 @@
 		870185451ACF45E0003846DC /* person-jim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8701853C1ACF45E0003846DC /* person-jim.jpg */; };
 		870185461ACF45E0003846DC /* person-sam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8701853D1ACF45E0003846DC /* person-sam.jpg */; };
 		870185471ACF45E0003846DC /* person-vanessa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8701853E1ACF45E0003846DC /* person-vanessa.jpg */; };
+		8733D45B1ACF4E9900D4B1FB /* person-jenner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8733D4591ACF4E9900D4B1FB /* person-jenner.jpg */; };
+		8733D45C1ACF4E9900D4B1FB /* person-sarah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8733D45A1ACF4E9900D4B1FB /* person-sarah.jpg */; };
 		87A568A91AB2457C0032D26F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568A81AB2457C0032D26F /* main.m */; };
 		87A568AC1AB2457C0032D26F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568AB1AB2457C0032D26F /* AppDelegate.m */; };
 		87A568AF1AB2457C0032D26F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568AE1AB2457C0032D26F /* MainViewController.m */; };
@@ -63,6 +65,8 @@
 		8701853C1ACF45E0003846DC /* person-jim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "person-jim.jpg"; sourceTree = "<group>"; };
 		8701853D1ACF45E0003846DC /* person-sam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "person-sam.jpg"; sourceTree = "<group>"; };
 		8701853E1ACF45E0003846DC /* person-vanessa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "person-vanessa.jpg"; sourceTree = "<group>"; };
+		8733D4591ACF4E9900D4B1FB /* person-jenner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "person-jenner.jpg"; sourceTree = "<group>"; };
+		8733D45A1ACF4E9900D4B1FB /* person-sarah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "person-sarah.jpg"; sourceTree = "<group>"; };
 		87A568A31AB2457C0032D26F /* BikeWithFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeWithFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A568A71AB2457C0032D26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A568A81AB2457C0032D26F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		870185351ACF45E0003846DC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8733D4591ACF4E9900D4B1FB /* person-jenner.jpg */,
+				8733D45A1ACF4E9900D4B1FB /* person-sarah.jpg */,
 				870185361ACF45E0003846DC /* bike-icon.png */,
 				870185371ACF45E0003846DC /* calendar-icon.png */,
 				870185381ACF45E0003846DC /* chart.png */,
@@ -397,11 +403,13 @@
 				870185401ACF45E0003846DC /* calendar-icon.png in Resources */,
 				264C66F91AC5176F009ED889 /* friends.txt in Resources */,
 				870185431ACF45E0003846DC /* hourglass-icon.png in Resources */,
+				8733D45B1ACF4E9900D4B1FB /* person-jenner.jpg in Resources */,
 				87A568B21AB2457C0032D26F /* Main.storyboard in Resources */,
 				870185441ACF45E0003846DC /* person-george.jpg in Resources */,
 				870185421ACF45E0003846DC /* friends-icon.png in Resources */,
 				87A568B71AB2457C0032D26F /* LaunchScreen.xib in Resources */,
 				870185471ACF45E0003846DC /* person-vanessa.jpg in Resources */,
+				8733D45C1ACF4E9900D4B1FB /* person-sarah.jpg in Resources */,
 				870185411ACF45E0003846DC /* chart.png in Resources */,
 				87A568B41AB2457C0032D26F /* Images.xcassets in Resources */,
 				870185461ACF45E0003846DC /* person-sam.jpg in Resources */,

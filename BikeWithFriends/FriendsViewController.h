@@ -16,5 +16,6 @@
 @property (strong, nonatomic) RequestSetupView *requestSetupView;
 @property (strong, nonatomic) Friends *friends;
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) UIImage *bikeImage;
 
 @end
