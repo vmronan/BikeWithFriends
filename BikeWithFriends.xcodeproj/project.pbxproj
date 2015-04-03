@@ -10,6 +10,7 @@
 		262752501AC5EF8B00DCD221 /* FriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627524F1AC5EF8B00DCD221 /* FriendsTests.m */; };
 		264C66F91AC5176F009ED889 /* friends.txt in Resources */ = {isa = PBXBuildFile; fileRef = 264C66F81AC5176F009ED889 /* friends.txt */; };
 		264C66FC1AC51DA6009ED889 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 264C66FB1AC51DA6009ED889 /* Friend.m */; };
+		8701852D1ACE2810003846DC /* bike-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8701852C1ACE2810003846DC /* bike-icon.png */; };
 		8778C3451ACA82C100FE6D7C /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8778C3441ACA82C100FE6D7C /* chart.png */; };
 		87A568A91AB2457C0032D26F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568A81AB2457C0032D26F /* main.m */; };
 		87A568AC1AB2457C0032D26F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568AB1AB2457C0032D26F /* AppDelegate.m */; };
@@ -26,7 +27,6 @@
 		87A568E11AB250EA0032D26F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568E01AB250EA0032D26F /* LoginViewController.m */; };
 		87A568EB1AB2517D0032D26F /* Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568EA1AB2517D0032D26F /* Friends.m */; };
 		87A568EE1AB2518D0032D26F /* Rides.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568ED1AB2518D0032D26F /* Rides.m */; };
-		87A568F21AB289740032D26F /* FriendsListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F11AB289740032D26F /* FriendsListTableView.m */; };
 		87A568F51AB289820032D26F /* RequestSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F41AB289820032D26F /* RequestSetupView.m */; };
 		87A568F81AB28F370032D26F /* AddFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568F71AB28F370032D26F /* AddFriendsView.m */; };
 		87A568FB1AB290A40032D26F /* LogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A568FA1AB290A40032D26F /* LogsViewController.m */; };
@@ -47,6 +47,7 @@
 		264C66F81AC5176F009ED889 /* friends.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = friends.txt; sourceTree = "<group>"; };
 		264C66FA1AC51DA6009ED889 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
 		264C66FB1AC51DA6009ED889 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		8701852C1ACE2810003846DC /* bike-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bike-icon.png"; sourceTree = "<group>"; };
 		8778C3441ACA82C100FE6D7C /* chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart.png; sourceTree = "<group>"; };
 		87A568A31AB2457C0032D26F /* BikeWithFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeWithFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A568A71AB2457C0032D26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,8 +79,6 @@
 		87A568EC1AB2518D0032D26F /* Rides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rides.h; sourceTree = "<group>"; };
 		87A568ED1AB2518D0032D26F /* Rides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rides.m; sourceTree = "<group>"; };
 		87A568EF1AB251A20032D26F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		87A568F01AB289740032D26F /* FriendsListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableView.h; sourceTree = "<group>"; };
-		87A568F11AB289740032D26F /* FriendsListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableView.m; sourceTree = "<group>"; };
 		87A568F31AB289820032D26F /* RequestSetupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestSetupView.h; sourceTree = "<group>"; };
 		87A568F41AB289820032D26F /* RequestSetupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestSetupView.m; sourceTree = "<group>"; };
 		87A568F61AB28F370032D26F /* AddFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendsView.h; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		87A568A61AB2457C0032D26F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8701852C1ACE2810003846DC /* bike-icon.png */,
 				8778C3441ACA82C100FE6D7C /* chart.png */,
 				87A568A71AB2457C0032D26F /* Info.plist */,
 				87A568A81AB2457C0032D26F /* main.m */,
@@ -256,8 +256,6 @@
 				87A568DA1AB250B60032D26F /* FriendsViewController.m */,
 				87A568F61AB28F370032D26F /* AddFriendsView.h */,
 				87A568F71AB28F370032D26F /* AddFriendsView.m */,
-				87A568F01AB289740032D26F /* FriendsListTableView.h */,
-				87A568F11AB289740032D26F /* FriendsListTableView.m */,
 				87A568F31AB289820032D26F /* RequestSetupView.h */,
 				87A568F41AB289820032D26F /* RequestSetupView.m */,
 			);
@@ -369,6 +367,7 @@
 				264C66F91AC5176F009ED889 /* friends.txt in Resources */,
 				87A568B21AB2457C0032D26F /* Main.storyboard in Resources */,
 				87A568B71AB2457C0032D26F /* LaunchScreen.xib in Resources */,
+				8701852D1ACE2810003846DC /* bike-icon.png in Resources */,
 				8778C3451ACA82C100FE6D7C /* chart.png in Resources */,
 				87A568B41AB2457C0032D26F /* Images.xcassets in Resources */,
 			);
@@ -392,7 +391,6 @@
 				87A568D51AB250A50032D26F /* StatisticsViewController.m in Sources */,
 				87A568F81AB28F370032D26F /* AddFriendsView.m in Sources */,
 				87A568DE1AB250C00032D26F /* BikingProgressViewController.m in Sources */,
-				87A568F21AB289740032D26F /* FriendsListTableView.m in Sources */,
 				87A568AF1AB2457C0032D26F /* MainViewController.m in Sources */,
 				87A568EB1AB2517D0032D26F /* Friends.m in Sources */,
 				87A568DB1AB250B60032D26F /* FriendsViewController.m in Sources */,
