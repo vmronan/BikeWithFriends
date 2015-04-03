@@ -65,7 +65,7 @@
     // Icon
     int iconSize = _boxEdge/2;
     UIImageView *iconView = [[UIImageView alloc] initWithImage:icon];
-    [iconView setFrame:CGRectMake(_boxEdge/4, 0, iconSize, iconSize)];
+    [iconView setFrame:CGRectMake(_boxEdge/4, _boxEdge/20, iconSize, iconSize)];
     [background addSubview:iconView];
     
     // Achievement name
