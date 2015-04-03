@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Friend.h"
 
 @protocol RequestSetupProtocol <NSObject>
 -(void)sendRequestForTime:(NSDate*)datetime atPlace:(NSString*)where withNotes:(NSString*)notes;
@@ -16,5 +17,5 @@
 
 @property (assign, nonatomic) id <RequestSetupProtocol> delegate;
 
--(id)initWithFrame:(CGRect)frame;
+-(id)initWithFrame:(CGRect)frame friend:(Friend *)friend;
 @end
