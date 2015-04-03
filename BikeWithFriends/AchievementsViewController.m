@@ -78,13 +78,14 @@
     // Progress bar
     UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, frame.size.height*4/5, frame.size.width, frame.size.height/3)];
     [progressView setProgress:([pointsEarned floatValue]/[maxPoints floatValue])];
-    [progressView setTintColor:[UIColor grayColor]];
+    [progressView setTrackTintColor:[UIColor lightGrayColor]];
+    [progressView setTintColor:[UIColor whiteColor]];
     [background addSubview:progressView];
     
     // Progress fraction
     UILabel *progressLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height*3/4, _boxEdge, frame.size.height/3)];
     [progressLabel setTextAlignment:NSTextAlignmentCenter];
-    [progressLabel setFont:[UIFont fontWithName:kMainFont size:14]];
+    [progressLabel setFont:[UIFont fontWithName:kMainFont size:16]];
     [progressLabel setText:[NSString stringWithFormat:@"%@/%@", pointsEarned, maxPoints]];
     [background addSubview:progressLabel];
     
