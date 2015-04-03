@@ -76,6 +76,7 @@
     // add time
     self.timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/2.5, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
     [self.timerLabel setFont:[UIFont systemFontOfSize:46]];
+    [self.timerLabel setTextAlignment:NSTextAlignmentCenter];
     [self.timerLabel setText:@"00:00"];
     [background addSubview:self.timerLabel];
 }
@@ -108,12 +109,15 @@
     NSString *distanceString = [NSString stringWithFormat:@"%0.2f", distance];
     UILabel *distanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
     [distanceLabel setFont:[UIFont systemFontOfSize:25]];
+    [distanceLabel setTextAlignment:NSTextAlignmentCenter];
     [distanceLabel setText:distanceString];
     [background addSubview:distanceLabel];
     
     // add title
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height*2/3, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
     [textLabel setText:@"MILES"];
+    [textLabel setTextAlignment:NSTextAlignmentCenter];
+
     [background addSubview:textLabel];
 }
 
@@ -137,12 +141,15 @@
     NSString *speedString = [NSString stringWithFormat:@"%0.2f", speed];
     UILabel *speedLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/4, frame.CGRectValue.size.height/3, frame.CGRectValue.size.width/2, frame.CGRectValue.size.height/3)];
     [speedLabel setFont:[UIFont systemFontOfSize:25]];
+    [speedLabel setTextAlignment:NSTextAlignmentCenter];
+
     [speedLabel setText:speedString];
     [background addSubview:speedLabel];
     
     // add title
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height*2/3, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
     [textLabel setText:@"MPH"];
+    [textLabel setTextAlignment:NSTextAlignmentCenter];
     [background addSubview:textLabel];
 }
 
