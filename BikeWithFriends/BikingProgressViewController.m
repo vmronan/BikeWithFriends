@@ -135,7 +135,7 @@
     
     // add speed
     NSString *speedString = [NSString stringWithFormat:@"%0.2f", speed];
-    UILabel *speedLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
+    UILabel *speedLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/4, frame.CGRectValue.size.height/3, frame.CGRectValue.size.width/2, frame.CGRectValue.size.height/3)];
     [speedLabel setFont:[UIFont systemFontOfSize:25]];
     [speedLabel setText:speedString];
     [background addSubview:speedLabel];
