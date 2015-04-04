@@ -110,6 +110,7 @@
     UIButton *rideRequestButton = [[UIButton alloc] initWithFrame:CGRectMake(30, 550, 300, 100)];
     [rideRequestButton setTitle:@"Send request" forState:UIControlStateNormal];
     [rideRequestButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [rideRequestButton setBackgroundColor:[UIColor colorWithRed:0.77 green:0.95 blue:0.39 alpha:1.0]];
     [rideRequestButton addTarget:self action:@selector(sendRequest) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:rideRequestButton];
 }
