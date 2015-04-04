@@ -13,6 +13,8 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self.acceptButtonOn = false;
+    self.rejectButtonOn = false;
     if (self) {
         // configure layout
         
@@ -66,14 +68,37 @@
 }
 
 - (void) acceptRideRequest:(id)sender {
-    [self.acceptButton setImage:[UIImage imageNamed:@"acceptIconGreen.png"] forState: UIControlStateNormal];
+    if (!self.rejectButtonOn) {
+        self.acceptButtonOn = true;
+        [self.acceptButton setImage:[UIImage imageNamed:@"acceptIconGreen.png"] forState: UIControlStateNormal];
+        [self.rejectButton setImage:[UIImage imageNamed:@"rejectIconGrey.png"] forState: UIControlStateNormal];
+
+    }
 }
 
 -(void)rejectRideRequest:(id)sender
 {
-    [self.rejectButton setImage:[UIImage imageNamed:@"rejectIconRed.png"] forState: UIControlStateNormal];
+    if (!self.acceptButtonOn) {
+        self.rejectButtonOn = true;
+        [self.rejectButton setImage:[UIImage imageNamed:@"rejectIconRed.png"] forState: UIControlStateNormal];
+        [self.acceptButton setImage:[UIImage imageNamed:@"acceptIconGrey.png"] forState: UIControlStateNormal];
+
+    }
 
 }
+
+-(void)cancelRideRequest:(id)sender
+{
+    self.mainLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+    self.descriptionLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+    [self.cancelButton setImage:[UIImage imageNamed:@"rejectIconRed.png"] forState: UIControlStateNormal];
+
+}
+
+
+
+
+
 
 
 @end
