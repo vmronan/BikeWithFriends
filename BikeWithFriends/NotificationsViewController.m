@@ -17,7 +17,7 @@
         self.cellType = [NSMutableArray arrayWithArray:@[@"rideRequest", @"sentRequest",@"rideRequest", @"sentRequest",@"rideRequest", @"sentRequest"]];
         self.profilePictures = [NSMutableArray arrayWithArray:@[@"profilePicture1.jpg", @"profilePicture2.jpg", @"profilePicture3.jpg",@"profilePicture1.jpg", @"profilePicture2.jpg", @"profilePicture3.jpg"]];
         self.notifications = [NSMutableArray arrayWithArray:@[@"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm", @"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm", @"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm"]];
-        self.descriptions = [NSMutableArray arrayWithArray:@[@"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime:4pm \nLocation:Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime:4pm \nLocation:Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime:4pm \nLocation:Mudd"]];
+        self.descriptions = [NSMutableArray arrayWithArray:@[@"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime:4pm \nLocation:Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime:4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime: 4pm \nLocation:Mudd"]];
     }
     [self.tableView setSeparatorColor:[UIColor colorWithRed:199.0f/255.0f green:244.0f/255.0f blue:100.0f/255.0f alpha:1.0f]];
 
@@ -27,7 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Notifications"];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

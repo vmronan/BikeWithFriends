@@ -7,19 +7,14 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
-
-
-@end
+#import "Constants.h"
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setBackgroundColor:[UIColor whiteColor]];
+    [self customizeNavBarView];
     [self pushMainView];
     return YES;
 }
@@ -29,6 +24,16 @@
     self.navController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
     self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
+}
+
+- (void)customizeNavBarView {
+    // Set title font
+    UIFont *navBarTitleFont = [UIFont fontWithName:kMainFont size:16.0];
+    [self.navController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObject:navBarTitleFont forKey:NSFontAttributeName]];
+    
+    // Set back button and nav bar icon color and font
+    self.window.tintColor = kBlueColor;
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:kMainFont size:16.0], NSTextEffectAttributeName:NSTextEffectLetterpressStyle} forState:UIControlStateNormal];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
