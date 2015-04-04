@@ -38,7 +38,7 @@
     [self.segControl setFrame:CGRectMake(_screenWidth/20, 84, _screenWidth*9/10, 32)];
     [self.segControl setSelectedSegmentIndex:0];
     [self.segControl setTintColor:kRedColor];
-    [self.segControl addTarget:self action:@selector(updateGraph) forControlEvents:UIControlEventValueChanged];
+    [self.segControl addTarget:self action:@selector(updateGraphAndTotals) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.segControl];
 }
 
@@ -46,6 +46,11 @@
     // Create graph UIImageView the first time
     self.graph = [[UIImageView alloc] initWithFrame:CGRectMake(_screenWidth/20, 136, _screenWidth*9/10, _screenWidth*2/3)];
     [self.view addSubview:self.graph];
+}
+
+- (void)updateGraphAndTotals {
+    [self updateGraph];
+    [self updateTotals];
 }
 
 - (void)showGraphWithImageNamed:(NSString *)imageName {
@@ -72,19 +77,24 @@
 }
 
 - (void)showTotals {
-    UILabel *totalDistLabel = [[UILabel alloc] initWithFrame:CGRectMake(_screenWidth/20, self.view.frame.size.height/2+120, _screenWidth*9/10, 30)];
-    [totalDistLabel setTextAlignment:NSTextAlignmentCenter];
-    [totalDistLabel setFont:[UIFont fontWithName:kMainFont size:22]];
-    [totalDistLabel setText:[NSString stringWithFormat:@"5.9 miles this %@", [self.segSections[self.segControl.selectedSegmentIndex] lowercaseString]]];
-    [self.view addSubview:totalDistLabel];
+    self.totalDistLabel = [[UILabel alloc] initWithFrame:CGRectMake(_screenWidth/20, self.view.frame.size.height/2+120, _screenWidth*9/10, 30)];
+    [self.totalDistLabel setTextAlignment:NSTextAlignmentCenter];
+    [self.totalDistLabel setFont:[UIFont fontWithName:kMainFont size:22]];
+    [self.totalDistLabel setText:[NSString stringWithFormat:@"5.9 miles this %@", [self.segSections[self.segControl.selectedSegmentIndex] lowercaseString]]];
+    [self.view addSubview:self.totalDistLabel];
     
-    UILabel *totalTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(_screenWidth/20, self.view.frame.size.height/2+170, _screenWidth*9/10, 30)];
-    [totalTimeLabel setTextAlignment:NSTextAlignmentCenter];
-     [totalTimeLabel setFont:[UIFont fontWithName:kMainFont size:22]];
-    [totalTimeLabel setText:[NSString stringWithFormat:@"1 hour, 23 minutes this %@", [self.segSections[self.segControl.selectedSegmentIndex] lowercaseString]]];
-    [self.view addSubview:totalTimeLabel];
+    self.totalTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(_screenWidth/20, self.view.frame.size.height/2+170, _screenWidth*9/10, 30)];
+    [self.totalTimeLabel setTextAlignment:NSTextAlignmentCenter];
+     [self.totalTimeLabel setFont:[UIFont fontWithName:kMainFont size:22]];
+    [self.totalTimeLabel setText:[NSString stringWithFormat:@"1 hour, 23 minutes this %@", [self.segSections[self.segControl.selectedSegmentIndex] lowercaseString]]];
+    [self.view addSubview:self.totalTimeLabel];
 }
-     
+
+- (void)updateTotals {
+    [self.totalDistLabel setText:[NSString stringWithFormat:@"5.9 miles this %@", [self.segSections[self.segControl.selectedSegmentIndex] lowercaseString]]];
+    [self.totalTimeLabel setText:[NSString stringWithFormat:@"1 hour, 23 minutes this %@", [self.segSections[self.segControl.selectedSegmentIndex] lowercaseString]]];
+}
+
 
 /*** LOGS ***/
 

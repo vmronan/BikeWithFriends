@@ -17,5 +17,7 @@
 @property (strong, nonatomic) NSArray *segSections;
 @property (strong, nonatomic) UISegmentedControl *segControl;
 @property (strong, nonatomic) UIImageView *graph;
+@property (strong, nonatomic) UILabel *totalDistLabel;
+@property (strong, nonatomic) UILabel *totalTimeLabel;
 
 @end
