@@ -20,6 +20,8 @@
 @property (nonatomic, strong) UIButton *acceptButton;
 @property (nonatomic, strong) UIButton *rejectButton;
 @property (nonatomic, strong) UIButton *cancelButton;
+@property bool acceptButtonOn;
+@property bool rejectButtonOn;
 
 // send button click information
 @property (weak, nonatomic) id<CellDelegate>delegate;

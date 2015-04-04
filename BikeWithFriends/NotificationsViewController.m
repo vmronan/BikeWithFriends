@@ -19,8 +19,7 @@
         self.notifications = [NSMutableArray arrayWithArray:@[@"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm", @"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm", @"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm"]];
         self.descriptions = [NSMutableArray arrayWithArray:@[@"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation:Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd"]];
     }
-    [self.tableView setSeparatorColor:[UIColor colorWithRed:199.0f/255.0f green:244.0f/255.0f blue:100.0f/255.0f alpha:1.0f]];
-
+    
     return self;
 }
 
@@ -69,14 +68,9 @@
             
             // set up button behavior
             cell.cancelButton.tag = indexPath.row;
-            [cell.cancelButton addTarget:self action:@selector(cancelRideRequest:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.cancelButton addTarget:cell action:@selector(cancelRideRequest:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
-    
-    
-    // change background color
-    [self changeBackgroundColor:cell indexPath:indexPath];
-    
 
     // set cell information for ride request
     [cell.profileImage setImage:[UIImage imageNamed:[self.profilePictures objectAtIndex:indexPath.row]]];
@@ -85,38 +79,6 @@
     
     return cell;
 }
-
--(void)cancelRideRequest:(id)sender
-{
-    UIButton *senderButton = (UIButton *)sender;
-    [self.cellType removeObjectAtIndex:senderButton.tag];
-    [self.profilePictures removeObjectAtIndex:senderButton.tag];
-    [self.notifications removeObjectAtIndex:senderButton.tag];
-    [self.descriptions removeObjectAtIndex:senderButton.tag];
-    [self.tableView reloadData];
-}
-
--(void)changeBackgroundColor:(NotificationCustomCell *)cell indexPath:(NSIndexPath *)indexPath {
-//    if (indexPath.row % 3 == 0) {
-//        UIColor *backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:107.0f/255.0f blue:107.0f/255.0f alpha:1.0f];
-//    }
-//    else if (indexPath.row % 3 == 1) {
-//        UIColor *backgroundColor = [UIColor colorWithRed:199.0f/255.0f green:244.0f/255.0f blue:100.0f/255.0f alpha:1.0f];
-//    }
-//    else {
-
-    //UIColor *backgroundColor = [UIColor colorWithRed:26==78.0f/255.0f green:205.0f/255.0f blue:196.0f/255.0f alpha:1.0f];
-//    }
-    //cell.backgroundColor = backgroundColor;
-    
-}
-
-
-
-
-
-
-
 
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
