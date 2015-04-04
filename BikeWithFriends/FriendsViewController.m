@@ -108,7 +108,7 @@
     }
     
     cell.accessoryView = (UIView *)[[UIImageView alloc] initWithImage:self.bikeImage];
-    [cell.accessoryView setFrame:CGRectMake(0, 0, 32, 20)];
+    [cell.accessoryView setFrame:CGRectMake(0, 0, 36, 36)];
     return cell;
 }
 
