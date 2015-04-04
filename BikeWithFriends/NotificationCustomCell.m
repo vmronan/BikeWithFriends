@@ -17,18 +17,8 @@
         // configure layout
         
         // profile image
-        self.profileImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 10, 50, 30)];
+        self.profileImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 10, 50, 50)];
         [self.profileImage setContentMode: UIViewContentModeScaleToFill];
-        
-        // get the layer of this image view
-        CALayer * l = [self.profileImage layer];
-        [l setMasksToBounds:YES];
-        [l setCornerRadius:10.0];
-
-        // add border
-        //[l setBorderWidth:2.0];
-        //[l setBorderColor:[[UIColor blueColor] CGColor]];
-        
         [self addSubview:self.profileImage];
         
         // main label
@@ -49,13 +39,13 @@
         if ([reuseIdentifier  isEqual: @"rideRequest"]) {
         
             // accept button image
-            self.acceptButton = [[UIButton alloc] initWithFrame:CGRectMake(270, 20, 50, 30)];
+            self.acceptButton = [[UIButton alloc] initWithFrame:CGRectMake(280, 20, 40, 40)];
             [self.acceptButton setImage:[UIImage imageNamed:@"acceptIcon.png"] forState: UIControlStateNormal];
             [self.acceptButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [self addSubview:self.acceptButton];
             
             // reject button image
-            self.rejectButton = [[UIButton alloc] initWithFrame:CGRectMake(320, 20, 50, 30)];
+            self.rejectButton = [[UIButton alloc] initWithFrame:CGRectMake(330, 20, 40, 40)];
             [self.rejectButton setImage:[UIImage imageNamed:@"rejectIcon.png"] forState: UIControlStateNormal];
             [self.rejectButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [self addSubview:self.rejectButton];
@@ -64,8 +54,8 @@
         else {
             
             // cancel button image
-            self.cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(300, 20, 70, 30)];
-            [self.cancelButton setImage:[UIImage imageNamed:@"cancelButton.png"] forState: UIControlStateNormal];
+            self.cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(330, 20, 40, 40)];
+            [self.cancelButton setImage:[UIImage imageNamed:@"rejectIcon.png"] forState: UIControlStateNormal];
             [self.cancelButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [self addSubview:self.cancelButton];
         }
@@ -73,6 +63,16 @@
         
     }
     return self;
+}
+
+- (void) acceptRideRequest:(id)sender {
+    [self.acceptButton setImage:[UIImage imageNamed:@"acceptIconGreen.png"] forState: UIControlStateNormal];
+}
+
+-(void)rejectRideRequest:(id)sender
+{
+    [self.rejectButton setImage:[UIImage imageNamed:@"rejectIconRed.png"] forState: UIControlStateNormal];
+
 }
 
 

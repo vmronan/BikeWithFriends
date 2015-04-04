@@ -17,7 +17,7 @@
         self.cellType = [NSMutableArray arrayWithArray:@[@"rideRequest", @"sentRequest",@"rideRequest", @"sentRequest",@"rideRequest", @"sentRequest"]];
         self.profilePictures = [NSMutableArray arrayWithArray:@[@"profilePicture1.jpg", @"profilePicture2.jpg", @"profilePicture3.jpg",@"profilePicture1.jpg", @"profilePicture2.jpg", @"profilePicture3.jpg"]];
         self.notifications = [NSMutableArray arrayWithArray:@[@"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm", @"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm", @"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm"]];
-        self.descriptions = [NSMutableArray arrayWithArray:@[@"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime:4pm \nLocation:Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime:4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date:1/1/2015 \nTime: 4pm \nLocation:Mudd"]];
+        self.descriptions = [NSMutableArray arrayWithArray:@[@"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation:Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd"]];
     }
     [self.tableView setSeparatorColor:[UIColor colorWithRed:199.0f/255.0f green:244.0f/255.0f blue:100.0f/255.0f alpha:1.0f]];
 
@@ -60,8 +60,8 @@
             // set up button behavior
             cell.acceptButton.tag = indexPath.row;
             cell.rejectButton.tag = indexPath.row;
-            [cell.acceptButton addTarget:self action:@selector(acceptRideRequest:) forControlEvents:UIControlEventTouchUpInside];
-            [cell.rejectButton addTarget:self action:@selector(rejectRideRequest:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.acceptButton addTarget:cell action:@selector(acceptRideRequest:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.rejectButton addTarget:cell action:@selector(rejectRideRequest:) forControlEvents:UIControlEventTouchUpInside];
         }
         else {
             cell = [[NotificationCustomCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"sentRequest"];
@@ -86,26 +86,6 @@
     return cell;
 }
 
--(void)acceptRideRequest:(id)sender
-{
-    UIButton *senderButton = (UIButton *)sender;
-    [self.cellType removeObjectAtIndex:senderButton.tag];
-    [self.profilePictures removeObjectAtIndex:senderButton.tag];
-    [self.notifications removeObjectAtIndex:senderButton.tag];
-    [self.descriptions removeObjectAtIndex:senderButton.tag];
-    [self.tableView reloadData];
-}
-
--(void)rejectRideRequest:(id)sender
-{
-    UIButton *senderButton = (UIButton *)sender;
-    [self.cellType removeObjectAtIndex:senderButton.tag];
-    [self.profilePictures removeObjectAtIndex:senderButton.tag];
-    [self.notifications removeObjectAtIndex:senderButton.tag];
-    [self.descriptions removeObjectAtIndex:senderButton.tag];
-    [self.tableView reloadData];
-}
-
 -(void)cancelRideRequest:(id)sender
 {
     UIButton *senderButton = (UIButton *)sender;
@@ -125,9 +105,9 @@
 //    }
 //    else {
 
-    UIColor *backgroundColor = [UIColor colorWithRed:26==78.0f/255.0f green:205.0f/255.0f blue:196.0f/255.0f alpha:1.0f];
+    //UIColor *backgroundColor = [UIColor colorWithRed:26==78.0f/255.0f green:205.0f/255.0f blue:196.0f/255.0f alpha:1.0f];
 //    }
-    cell.backgroundColor = backgroundColor;
+    //cell.backgroundColor = backgroundColor;
     
 }
 
