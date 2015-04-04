@@ -40,7 +40,15 @@
 }
 
 - (void)showAddFriendsView {
-    // Not sure how we want this to work
+    // Change back button to cancel
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(showFriendsListView)];
+    [self.navigationItem setLeftBarButtonItem:cancelButton];
+    [self.navigationItem setRightBarButtonItem:nil];
+  
+    // Show view
+    [self setTitle:@"Add Friends"];
+    self.addFriendsView = [[AddFriendsView alloc] initWithFrame:self.view.frame];
+    [self setView:self.addFriendsView];
 }
 
 - (void)showFriendsListView {
