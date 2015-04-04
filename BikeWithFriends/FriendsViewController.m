@@ -112,7 +112,7 @@
     // Show bike icon on right of cell
     cell.accessoryType = UITableViewCellAccessoryDetailButton;
     if (self.bikeImage == nil) {
-        self.bikeImage = [UIImage imageNamed:@"bike-icon.png"];
+        self.bikeImage = [UIImage imageNamed:@"icon-bike.png"];
     }
     
     cell.accessoryView = (UIView *)[[UIImageView alloc] initWithImage:self.bikeImage];
