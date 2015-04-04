@@ -10,11 +10,11 @@
 		262752501AC5EF8B00DCD221 /* FriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627524F1AC5EF8B00DCD221 /* FriendsTests.m */; };
 		264C66F91AC5176F009ED889 /* friends.txt in Resources */ = {isa = PBXBuildFile; fileRef = 264C66F81AC5176F009ED889 /* friends.txt */; };
 		264C66FC1AC51DA6009ED889 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 264C66FB1AC51DA6009ED889 /* Friend.m */; };
-		26AA9C901ACF98C4009F6E84 /* btn-friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AA9C8C1ACF98C4009F6E84 /* btn-friends.png */; };
-		26AA9C911ACF98C4009F6E84 /* btn-notifications.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AA9C8D1ACF98C4009F6E84 /* btn-notifications.png */; };
-		26AA9C921ACF98C4009F6E84 /* btn-statistics.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AA9C8E1ACF98C4009F6E84 /* btn-statistics.png */; };
-		26AA9C981ACF9ECF009F6E84 /* btn-achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AA9C971ACF9ECF009F6E84 /* btn-achievements.png */; };
-		26AA9C9A1ACFA338009F6E84 /* btn-startbiking.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AA9C991ACFA338009F6E84 /* btn-startbiking.png */; };
+		26E277491AD08E9B00EDFB7C /* btn-achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E277441AD08E9B00EDFB7C /* btn-achievements.png */; };
+		26E2774A1AD08E9B00EDFB7C /* btn-friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E277451AD08E9B00EDFB7C /* btn-friends.png */; };
+		26E2774B1AD08E9B00EDFB7C /* btn-notifications.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E277461AD08E9B00EDFB7C /* btn-notifications.png */; };
+		26E2774C1AD08E9B00EDFB7C /* btn-startbiking.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E277471AD08E9B00EDFB7C /* btn-startbiking.png */; };
+		26E2774D1AD08E9B00EDFB7C /* btn-statistics.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E277481AD08E9B00EDFB7C /* btn-statistics.png */; };
 		8701853F1ACF45E0003846DC /* icon-bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 870185361ACF45E0003846DC /* icon-bike.png */; };
 		870185401ACF45E0003846DC /* icon-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 870185371ACF45E0003846DC /* icon-calendar.png */; };
 		870185421ACF45E0003846DC /* icon-friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 870185391ACF45E0003846DC /* icon-friends.png */; };
@@ -83,11 +83,11 @@
 		264C66F81AC5176F009ED889 /* friends.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = friends.txt; sourceTree = "<group>"; };
 		264C66FA1AC51DA6009ED889 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
 		264C66FB1AC51DA6009ED889 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
-		26AA9C8C1ACF98C4009F6E84 /* btn-friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-friends.png"; sourceTree = "<group>"; };
-		26AA9C8D1ACF98C4009F6E84 /* btn-notifications.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-notifications.png"; sourceTree = "<group>"; };
-		26AA9C8E1ACF98C4009F6E84 /* btn-statistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-statistics.png"; sourceTree = "<group>"; };
-		26AA9C971ACF9ECF009F6E84 /* btn-achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-achievements.png"; sourceTree = "<group>"; };
-		26AA9C991ACFA338009F6E84 /* btn-startbiking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-startbiking.png"; sourceTree = "<group>"; };
+		26E277441AD08E9B00EDFB7C /* btn-achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-achievements.png"; sourceTree = "<group>"; };
+		26E277451AD08E9B00EDFB7C /* btn-friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-friends.png"; sourceTree = "<group>"; };
+		26E277461AD08E9B00EDFB7C /* btn-notifications.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-notifications.png"; sourceTree = "<group>"; };
+		26E277471AD08E9B00EDFB7C /* btn-startbiking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-startbiking.png"; sourceTree = "<group>"; };
+		26E277481AD08E9B00EDFB7C /* btn-statistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-statistics.png"; sourceTree = "<group>"; };
 		870185361ACF45E0003846DC /* icon-bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bike.png"; sourceTree = "<group>"; };
 		870185371ACF45E0003846DC /* icon-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-calendar.png"; sourceTree = "<group>"; };
 		870185391ACF45E0003846DC /* icon-friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-friends.png"; sourceTree = "<group>"; };
@@ -182,11 +182,11 @@
 		870185351ACF45E0003846DC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				26AA9C991ACFA338009F6E84 /* btn-startbiking.png */,
-				26AA9C971ACF9ECF009F6E84 /* btn-achievements.png */,
-				26AA9C8C1ACF98C4009F6E84 /* btn-friends.png */,
-				26AA9C8D1ACF98C4009F6E84 /* btn-notifications.png */,
-				26AA9C8E1ACF98C4009F6E84 /* btn-statistics.png */,
+				26E277441AD08E9B00EDFB7C /* btn-achievements.png */,
+				26E277451AD08E9B00EDFB7C /* btn-friends.png */,
+				26E277461AD08E9B00EDFB7C /* btn-notifications.png */,
+				26E277471AD08E9B00EDFB7C /* btn-startbiking.png */,
+				26E277481AD08E9B00EDFB7C /* btn-statistics.png */,
 				8733D45D1ACF56F600D4B1FB /* graph-life.png */,
 				8733D45E1ACF56F600D4B1FB /* graph-month.png */,
 				8733D45F1ACF56F600D4B1FB /* graph-week.png */,
@@ -490,23 +490,22 @@
 				E98E273D1ACF6E2400D24C6A /* rejectIconRed.png in Resources */,
 				E9A217141ACD0468001DBF60 /* pauseIcon.png in Resources */,
 				87A568B71AB2457C0032D26F /* LaunchScreen.xib in Resources */,
-				26AA9C9A1ACFA338009F6E84 /* btn-startbiking.png in Resources */,
-				26AA9C981ACF9ECF009F6E84 /* btn-achievements.png in Resources */,
 				8733D4621ACF56F600D4B1FB /* graph-month.png in Resources */,
 				E98E273F1ACF76E800D24C6A /* rejectIconGrey.png in Resources */,
 				E98E27331ACF48CA00D24C6A /* cancelButton.png in Resources */,
 				E9A217101ACCFFBB001DBF60 /* speedIcon.png in Resources */,
 				E9A217181ACD0630001DBF60 /* finishIcon.png in Resources */,
+				26E2774D1AD08E9B00EDFB7C /* btn-statistics.png in Resources */,
 				E98E27411ACF775C00D24C6A /* acceptIconGrey.png in Resources */,
 				8733D4641ACF56F600D4B1FB /* graph-year.png in Resources */,
 				8733D4631ACF56F600D4B1FB /* graph-week.png in Resources */,
 				E9A217121ACD0228001DBF60 /* timerIcon.png in Resources */,
-				26AA9C921ACF98C4009F6E84 /* btn-statistics.png in Resources */,
 				E9D5E9CD1ACE3C860085E7DC /* cancelIcon.png in Resources */,
 				8733D4611ACF56F600D4B1FB /* graph-life.png in Resources */,
 				E9A2170E1ACCF3B0001DBF60 /* roadIcon.png in Resources */,
 				E9D5E9C71ACE33C20085E7DC /* profilePicture2.jpg in Resources */,
-				26AA9C911ACF98C4009F6E84 /* btn-notifications.png in Resources */,
+				26E2774C1AD08E9B00EDFB7C /* btn-startbiking.png in Resources */,
+				26E2774B1AD08E9B00EDFB7C /* btn-notifications.png in Resources */,
 				E98E27371ACF4BC200D24C6A /* profilePicture1.jpg in Resources */,
 				E98E27351ACF4B2D00D24C6A /* profilePicture3.jpg in Resources */,
 				870185451ACF45E0003846DC /* person-jim.jpg in Resources */,
@@ -516,7 +515,7 @@
 				8733D45B1ACF4E9900D4B1FB /* person-jenner.jpg in Resources */,
 				870185431ACF45E0003846DC /* icon-hourglass.png in Resources */,
 				E98E27391ACF659300D24C6A /* cancelIcon2.png in Resources */,
-				26AA9C901ACF98C4009F6E84 /* btn-friends.png in Resources */,
+				26E2774A1AD08E9B00EDFB7C /* btn-friends.png in Resources */,
 				87A568B21AB2457C0032D26F /* Main.storyboard in Resources */,
 				870185441ACF45E0003846DC /* person-george.jpg in Resources */,
 				870185421ACF45E0003846DC /* icon-friends.png in Resources */,
@@ -527,6 +526,7 @@
 				870185461ACF45E0003846DC /* person-sam.jpg in Resources */,
 				8701853F1ACF45E0003846DC /* icon-bike.png in Resources */,
 				E98E273B1ACF6E1500D24C6A /* acceptIconGreen.png in Resources */,
+				26E277491AD08E9B00EDFB7C /* btn-achievements.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
