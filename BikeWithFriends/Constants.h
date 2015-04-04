@@ -15,5 +15,6 @@
 #define kGreenColor [UIColor colorWithRed:106.0/255.0 green:232.0/255.0 blue:114.0/255.0 alpha:1.0]
 
 #define kMainFont @"KohinoorDevanagari-Book"
+#define kBoldFont @"KohinoorDevanagari-Medium"
 
 #endif

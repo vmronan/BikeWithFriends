@@ -59,7 +59,6 @@
     CGFloat navSectionYOffset = progressYOffset + progressHeight + (progressHeight * 0.25);
     CGFloat navSectionWidth = screenWidth - (2 * navSectionXOffset);
     CGFloat navSectionHeight = screenHeight - progressHeight - (2 * progressYOffset);
-    CGRect navSectionFrame = CGRectMake(navSectionXOffset, navSectionYOffset, navSectionWidth, navSectionHeight);
     
     CGFloat buttonXPadding = navSectionWidth * 0.02;
     CGFloat buttonYPadding = navSectionHeight * 0.02;
@@ -92,51 +91,39 @@
     buttonXOffset -= buttonWidth + buttonXPadding;
     buttonFrame = CGRectMake(buttonXOffset, buttonYOffset, buttonWidth, buttonHeight);
     [self displayStatisticsButtonWithFrame:buttonFrame];
-    
-    NSLog(@"Button width: %f, button height: %f", buttonWidth, buttonHeight);
 }
 
 - (void)displayStartBikingButtonWithFrame:(CGRect)frame {
     self.startBikingButton = [[UIButton alloc] initWithFrame:frame];
-    [self.startBikingButton setTitle:@"Start Biking" forState:UIControlStateNormal];
-    [self.startBikingButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.startBikingButton setBackgroundColor:[UIColor greenColor]];
+    [self.startBikingButton setBackgroundImage:[UIImage imageNamed:@"btn-startbiking"] forState:UIControlStateNormal];
     [self.startBikingButton addTarget:self action:@selector(pushBikingProgressView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.startBikingButton];
 }
 
 - (void)displayNotificationsButtonWithFrame:(CGRect)frame {
     self.notificationsButton = [[UIButton alloc] initWithFrame:frame];
-    [self.notificationsButton setTitle:@"Notifications" forState:UIControlStateNormal];
-    [self.notificationsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.notificationsButton setBackgroundColor:[UIColor yellowColor]];
+    [self.notificationsButton setBackgroundImage:[UIImage imageNamed:@"btn-notifications"] forState:UIControlStateNormal];
     [self.notificationsButton addTarget:self action:@selector(pushNotificationsView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.notificationsButton];
 }
 
 - (void)displayFriendsButtonWithFrame:(CGRect)frame {
     self.friendsButton = [[UIButton alloc] initWithFrame:frame];
-    [self.friendsButton setTitle:@"Friends" forState:UIControlStateNormal];
-    [self.friendsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.friendsButton setBackgroundColor:[UIColor blueColor]];
+    [self.friendsButton setBackgroundImage:[UIImage imageNamed:@"btn-friends"] forState:UIControlStateNormal];
     [self.friendsButton addTarget:self action:@selector(pushFriendsView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.friendsButton];
 }
 
 - (void)displayStatisticsButtonWithFrame:(CGRect)frame {
     self.statisticsButton = [[UIButton alloc] initWithFrame:frame];
-    [self.statisticsButton setTitle:@"Statistics" forState:UIControlStateNormal];
-    [self.statisticsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.statisticsButton setBackgroundColor:[UIColor redColor]];
+    [self.statisticsButton setBackgroundImage:[UIImage imageNamed:@"btn-statistics"] forState:UIControlStateNormal];
     [self.statisticsButton addTarget:self action:@selector(pushStatisticsView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.statisticsButton];
 }
 
 - (void)displayAchievementsButtonWithFrame:(CGRect)frame {
     self.achievementsButton = [[UIButton alloc] initWithFrame:frame];
-    [self.achievementsButton setTitle:@"Achievements" forState:UIControlStateNormal];
-    [self.achievementsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.achievementsButton setBackgroundColor:[UIColor purpleColor]];
+    [self.achievementsButton setBackgroundImage:[UIImage imageNamed:@"btn-achievements"] forState:UIControlStateNormal];
     [self.achievementsButton addTarget:self action:@selector(pushAchievementsView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.achievementsButton];
 }
