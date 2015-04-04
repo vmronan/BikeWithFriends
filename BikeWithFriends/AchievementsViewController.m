@@ -13,11 +13,13 @@
 {
     int _boxPadding;
     int _boxEdge;
+    int _imgHeight;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Achievements"];
+    [self showLevelProgress];
     [self showAchievements];
  }
 
@@ -26,15 +28,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)showLevelProgress {
+    int imgWidth = self.view.frame.size.width-20;
+    UIImageView *levelProgressView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"level-progress"]];
+    _imgHeight = imgWidth/levelProgressView.image.size.width*levelProgressView.image.size.height;
+    [levelProgressView setFrame:CGRectMake(10, 74, imgWidth, imgWidth/levelProgressView.image.size.width*levelProgressView.image.size.height)];
+    [self.view addSubview:levelProgressView];
+}
+
 - (void)showAchievements {
-    int navBarHeight = 64;
+    int topHeight = 64 + _imgHeight;
     _boxPadding = self.view.frame.size.width/23;
     _boxEdge = self.view.frame.size.width*10/23;
     
-    NSArray *frames = @[[NSValue valueWithCGRect:CGRectMake(_boxPadding, navBarHeight+_boxPadding, _boxEdge, _boxEdge)],
-                        [NSValue valueWithCGRect:CGRectMake((2*_boxPadding)+_boxEdge, navBarHeight+_boxPadding, _boxEdge, _boxEdge)],
-                        [NSValue valueWithCGRect:CGRectMake(_boxPadding, navBarHeight+(2*_boxPadding)+_boxEdge, _boxEdge, _boxEdge)],
-                        [NSValue valueWithCGRect:CGRectMake((2*_boxPadding)+_boxEdge, navBarHeight+(2*_boxPadding)+_boxEdge, _boxEdge, _boxEdge)]];
+    NSArray *frames = @[[NSValue valueWithCGRect:CGRectMake(_boxPadding, topHeight+_boxPadding, _boxEdge, _boxEdge)],
+                        [NSValue valueWithCGRect:CGRectMake((2*_boxPadding)+_boxEdge, topHeight+_boxPadding, _boxEdge, _boxEdge)],
+                        [NSValue valueWithCGRect:CGRectMake(_boxPadding, topHeight+(2*_boxPadding)+_boxEdge, _boxEdge, _boxEdge)],
+                        [NSValue valueWithCGRect:CGRectMake((2*_boxPadding)+_boxEdge, topHeight+(2*_boxPadding)+_boxEdge, _boxEdge, _boxEdge)]];
     
     NSArray *backgroundColors = @[kBlueColor, kRedColor, kOrangeColor, kGreenColor];
     NSArray *pointsEarneds = @[@11, @7, @1, @9];    // update when points are earned
@@ -43,7 +53,7 @@
                         [NSString stringWithFormat:@"Bike %@ hours", maxPoints[1]],
                         [NSString stringWithFormat:@"Bike with %@ friends", maxPoints[2]],
                         [NSString stringWithFormat:@"Bike %@ times", maxPoints[3]]];
-    NSArray *iconTitles = @[@"icon-bike.png", @"icon-hourglass.png", @"icon-friends.png", @"icon-calendar.png"];
+    NSArray *iconTitles = @[@"icon-bike", @"icon-hourglass", @"icon-friends", @"icon-calendar"];
     
     for(int i = 0; i < 4; i++) {
         [self makeAchievementBoxWithFrame:[frames[i] CGRectValue] title:titles[i] backgroundColor:backgroundColors[i] pointsEarned:pointsEarneds[i] maxPoints:maxPoints[i] icon:[UIImage imageNamed:iconTitles[i]]];

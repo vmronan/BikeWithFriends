@@ -27,9 +27,11 @@
 }
 
 - (void)customizeNavBarView {
+    NSLog(@"customizing nav bar view");
+    
     // Set title font
-    UIFont *navBarTitleFont = [UIFont fontWithName:kMainFont size:16.0];
-    [self.navController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObject:navBarTitleFont forKey:NSFontAttributeName]];
+    UIFont *navBarTitleFont = [UIFont fontWithName:kMainFont size:20.0];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObject:navBarTitleFont forKey:NSFontAttributeName]];
     
     // Set back button and nav bar icon color and font
     self.window.tintColor = kBlueColor;
@@ -56,6 +58,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+@end
+
+@implementation UINavigationItem (myCustomization)
+
+-(UIBarButtonItem *)backBarButtonItem
+{
+    // Remove text next to back button
+    return [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 @end
