@@ -8,6 +8,7 @@
 
 #import "BikingProgressViewController.h"
 #import "Rides.h"
+#import "Constants.h"
 
 @implementation BikingProgressViewController {
     int _screenWidth;
@@ -20,7 +21,6 @@
 
 - (void)viewDidLoad {
     _navBarHeight = 64;
-    _progressImageHeight = 120;
     _boxPadding = self.view.frame.size.width/22;
     _boxEdge = self.view.frame.size.width*10/22;
     distance = 6;
@@ -28,8 +28,10 @@
     isPaused = false;
     
     [super viewDidLoad];
-    [self setTitle:@"Bike Ride in Progress"];
-    [self.navigationItem setHidesBackButton:YES]; // Pretty sure we still want this button?
+    [self setTitle:@"Enjoy Your Ride!"];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.navigationItem setHidesBackButton:YES];
+    [self showLevelProgress];
     [self showFinishRideButton];
     [self showPauseRideButton];
     [self showTimer];
@@ -37,14 +39,101 @@
     [self showSpeed];
 }
 
-- (void)showFinishRideButton {
-    self.endRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4 + _boxEdge, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdge * 2, _boxEdge/2, _boxEdge/2)];
-    [self.endRideButton setImage:[UIImage imageNamed:@"finishIcon.png"] forState: UIControlStateNormal];
-    [self.endRideButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.endRideButton addTarget:self action:@selector(endRide) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.endRideButton];
+- (void)showLevelProgress {
+    int imgWidth = self.view.frame.size.width-20;
+    UIImageView *levelProgressView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"level-progress"]];
+    _progressImageHeight = imgWidth/levelProgressView.image.size.width*levelProgressView.image.size.height;
+    [levelProgressView setFrame:CGRectMake(10, 74, imgWidth, imgWidth/levelProgressView.image.size.width*levelProgressView.image.size.height)];
+    [self.view addSubview:levelProgressView];
 }
 
+- (void)showTimer {
+    rideTime = 0;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(stopWatch) userInfo:nil repeats:YES];
+    
+    CGRect frame = CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight, _boxEdge * 2, _boxEdge);
+    
+    // colored background square
+    UIView *background = [[UIView alloc] initWithFrame:frame];
+    [background setBackgroundColor:kGreenColor];
+    [self.view addSubview:background];
+    
+    // add icon
+    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width/3, 20, frame.size.width/3, frame.size.height/3)];
+    [icon setContentMode: UIViewContentModeScaleAspectFit];
+    [icon setImage:[UIImage imageNamed:@"timerIcon.png"]];
+    [background addSubview:icon];
+    
+    // add time
+    self.timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width/3, frame.size.height/2, frame.size.width/3, frame.size.height/3)];
+    [self.timerLabel setFont:[UIFont fontWithName:kMainFont size:46]];
+    [self.timerLabel setTextAlignment:NSTextAlignmentCenter];
+    [self.timerLabel setText:@"00:00"];
+    [background addSubview:self.timerLabel];
+}
+
+- (void)showDistance {
+    CGRect frame = CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge);
+    NSLog(@"frame width: %f", frame.size.width);
+    
+    // colored background square
+    UIView *background = [[UIView alloc] initWithFrame:frame];
+    [background setBackgroundColor:kOrangeColor];
+    [self.view addSubview:background];
+    
+    // add icon
+    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width/3, 10, frame.size.width/3, frame.size.height/4)];
+    [icon setContentMode: UIViewContentModeScaleAspectFit];
+    [icon setImage:[UIImage imageNamed:@"roadIcon.png"]];
+    [background addSubview:icon];
+    
+    // add distance traveled
+    NSString *distanceString = [NSString stringWithFormat:@"%0.2f", distance];
+    UILabel *distanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height*2/5, frame.size.width, frame.size.height/3)];
+    [distanceLabel setFont:[UIFont fontWithName:kMainFont size:36]];
+    [distanceLabel setText:distanceString];
+    [distanceLabel setTextAlignment:NSTextAlignmentCenter];
+    [background addSubview:distanceLabel];
+    
+    // add title
+    UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height*2/3, frame.size.width, frame.size.height/3)];
+    [textLabel setText:@"MILES"];
+    [textLabel setFont:[UIFont fontWithName:kMainFont size:22]];
+    [textLabel setTextAlignment:NSTextAlignmentCenter];
+    
+    [background addSubview:textLabel];
+}
+
+- (void)showSpeed {
+    CGRect frame = CGRectMake(_boxPadding + _boxEdge, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge);
+    
+    // colored background square
+    UIView *background = [[UIView alloc] initWithFrame:frame];
+    [background setBackgroundColor:kRedColor];
+    [self.view addSubview:background];
+    
+    // add icon
+    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width/3, 10, frame.size.width/3, frame.size.height/3)];
+    [icon setContentMode: UIViewContentModeScaleAspectFit];
+    [icon setImage:[UIImage imageNamed:@"speedIcon.png"]];
+    [background addSubview:icon];
+    
+    // add speed
+    NSString *speedString = [NSString stringWithFormat:@"%0.2f", speed];
+    UILabel *speedLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width/4, frame.size.height*2/5, frame.size.width/2, frame.size.height/3)];
+    [speedLabel setFont:[UIFont fontWithName:kMainFont size:36]];
+    [speedLabel setTextAlignment:NSTextAlignmentCenter];
+    
+    [speedLabel setText:speedString];
+    [background addSubview:speedLabel];
+    
+    // add title
+    UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width/3, frame.size.height*2/3, frame.size.width/3, frame.size.height/3)];
+    [textLabel setText:@"MPH"];
+    [textLabel setFont:[UIFont fontWithName:kMainFont size:22]];
+    [textLabel setTextAlignment:NSTextAlignmentCenter];
+    [background addSubview:textLabel];
+}
 
 - (void)showPauseRideButton {
     self.pauseRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdge * 2, _boxEdge/2, _boxEdge/2)];
@@ -54,33 +143,13 @@
     [self.view addSubview:self.pauseRideButton];
 }
 
-
-- (void)showTimer {
-    rideTime = 0;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(stopWatch) userInfo:nil repeats:YES];
-
-    NSValue *frame = [NSValue valueWithCGRect:CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight, _boxEdge * 2, _boxEdge)];
-    UIColor *backgroundColor = [UIColor colorWithRed:26==78.0f/255.0f green:205.0f/255.0f blue:196.0f/255.0f alpha:1.0f];
-    
-    // colored background square
-    UIView *background = [[UIView alloc] initWithFrame:frame.CGRectValue];
-    [background setBackgroundColor:backgroundColor];
-    [self.view addSubview:background];
-    
-    // add icon
-    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 4, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
-    [icon setContentMode: UIViewContentModeScaleToFill];
-    [icon setImage:[UIImage imageNamed:@"timerIcon.png"]];
-    [background addSubview:icon];
-    
-    // add time
-    self.timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/2.5, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
-    [self.timerLabel setFont:[UIFont systemFontOfSize:46]];
-    [self.timerLabel setTextAlignment:NSTextAlignmentCenter];
-    [self.timerLabel setText:@"00:00"];
-    [background addSubview:self.timerLabel];
+- (void)showFinishRideButton {
+    self.endRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4 + _boxEdge, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdge * 2, _boxEdge/2, _boxEdge/2)];
+    [self.endRideButton setImage:[UIImage imageNamed:@"finishIcon.png"] forState: UIControlStateNormal];
+    [self.endRideButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.endRideButton addTarget:self action:@selector(endRide) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.endRideButton];
 }
-
 - (void)stopWatch {
     if (isPaused == false) {
         ++rideTime;
@@ -89,70 +158,6 @@
         self.timerLabel.text = [NSString stringWithFormat:@"%02ld:%02ld", (long)minutes, (long)seconds];
     }
 }
-
-- (void)showDistance {
-    NSValue *frame = [NSValue valueWithCGRect:CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge)];
-    UIColor *backgroundColor = [UIColor colorWithRed:199.0f/255.0f green:244.0f/255.0f blue:100.0f/255.0f alpha:1.0f];
-    
-    // colored background square
-    UIView *background = [[UIView alloc] initWithFrame:frame.CGRectValue];
-    [background setBackgroundColor:backgroundColor];
-    [self.view addSubview:background];
-    
-    // add icon
-    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 0, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/4)];
-    [icon setContentMode: UIViewContentModeScaleToFill];
-    [icon setImage:[UIImage imageNamed:@"roadIcon.png"]];
-    [background addSubview:icon];
-    
-    // add distance traveled
-    NSString *distanceString = [NSString stringWithFormat:@"%0.2f", distance];
-    UILabel *distanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
-    [distanceLabel setFont:[UIFont systemFontOfSize:25]];
-    [distanceLabel setTextAlignment:NSTextAlignmentCenter];
-    [distanceLabel setText:distanceString];
-    [background addSubview:distanceLabel];
-    
-    // add title
-    UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height*2/3, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
-    [textLabel setText:@"MILES"];
-    [textLabel setTextAlignment:NSTextAlignmentCenter];
-
-    [background addSubview:textLabel];
-}
-
-
-- (void)showSpeed {
-    NSValue *frame = [NSValue valueWithCGRect:CGRectMake(_boxPadding + _boxEdge, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge)];
-    UIColor *backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:107.0f/255.0f blue:107.0f/255.0f alpha:1.0f];
-    
-    // colored background square
-    UIView *background = [[UIView alloc] initWithFrame:frame.CGRectValue];
-    [background setBackgroundColor:backgroundColor];
-    [self.view addSubview:background];
-    
-    // add icon
-    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 0, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/4)];
-    [icon setContentMode: UIViewContentModeScaleToFill];
-    [icon setImage:[UIImage imageNamed:@"speedIcon.png"]];
-    [background addSubview:icon];
-    
-    // add speed
-    NSString *speedString = [NSString stringWithFormat:@"%0.2f", speed];
-    UILabel *speedLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/4, frame.CGRectValue.size.height/3, frame.CGRectValue.size.width/2, frame.CGRectValue.size.height/3)];
-    [speedLabel setFont:[UIFont systemFontOfSize:25]];
-    [speedLabel setTextAlignment:NSTextAlignmentCenter];
-
-    [speedLabel setText:speedString];
-    [background addSubview:speedLabel];
-    
-    // add title
-    UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, frame.CGRectValue.size.height*2/3, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
-    [textLabel setText:@"MPH"];
-    [textLabel setTextAlignment:NSTextAlignmentCenter];
-    [background addSubview:textLabel];
-}
-
 
 - (void)showAlertView {
     NSString *message = [NSString stringWithFormat:@"You rode %.02f miles over %02d minutes and %02d seconds. This comes out to an average speed of %.02f miles per hour.", distance, minutes, seconds, speed];
