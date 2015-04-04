@@ -18,9 +18,8 @@
 @property (strong, nonatomic) UIButton *statisticsButton;
 @property (strong, nonatomic) UIButton *achievementsButton;
 
-// Ride list for logs (may remove)
+// Ride list for logs
 @property(strong) NSMutableArray *rides;
-
 - (void)bikingProgressDidDismissWithData: (Rides*)ride;
 
 

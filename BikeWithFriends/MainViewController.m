@@ -199,21 +199,4 @@
     self.rides = [NSMutableArray arrayWithObjects:ride1, ride2, nil];
 }
 
-
-// transcribes this data for later? hopefully?
-- (NSMutableArray*)createLogs {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"rides.txt"];
-    
-    NSMutableArray *myObject=[NSMutableArray array];
-    [self.rides addObject:myObject];
-    
-    [NSKeyedArchiver archiveRootObject:myObject toFile:appFile];
-    
-    NSMutableArray* ridesArray = [NSKeyedUnarchiver unarchiveObjectWithFile:appFile];
-    
-    return ridesArray;
-}
-
 @end

@@ -8,6 +8,7 @@
 
 #import "BikingProgressViewController.h"
 #import "Rides.h"
+#import "Constants.h"
 
 @implementation BikingProgressViewController {
     int _screenWidth;
@@ -29,9 +30,10 @@
     
     [super viewDidLoad];
     [self setTitle:@"Bike Ride in Progress"];
-    [self.navigationItem setHidesBackButton:YES]; // Pretty sure we still want this button?
+    [self.navigationItem setHidesBackButton:YES];
     [self showFinishRideButton];
     [self showPauseRideButton];
+    [self showProgress];
     [self showTimer];
     [self showDistance];
     [self showSpeed];
@@ -54,13 +56,27 @@
     [self.view addSubview:self.pauseRideButton];
 }
 
+- (void)showProgress {
+    // Level progress -----
+    CGFloat progressXOffset = 0;
+    CGFloat progressYOffset = _screenHeight * 0.10;
+    CGFloat progressWidth = _screenWidth - (2 * progressXOffset);
+    CGFloat progressHeight = _screenHeight / 5.5;
+    
+    UIImageView* levelProgress = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 50)];
+    UIImage *levelProgressImage = [UIImage imageNamed:@"level-progress"];
+    [levelProgress setImage:[UIImage imageNamed:@"level-progress"]];
+    
+    [self.view addSubview:levelProgress];
+}
+
 
 - (void)showTimer {
     rideTime = 0;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(stopWatch) userInfo:nil repeats:YES];
 
     NSValue *frame = [NSValue valueWithCGRect:CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight, _boxEdge * 2, _boxEdge)];
-    UIColor *backgroundColor = [UIColor colorWithRed:26==78.0f/255.0f green:205.0f/255.0f blue:196.0f/255.0f alpha:1.0f];
+    UIColor *backgroundColor = kBlueColor;
     
     // colored background square
     UIView *background = [[UIView alloc] initWithFrame:frame.CGRectValue];
@@ -68,7 +84,7 @@
     [self.view addSubview:background];
     
     // add icon
-    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 4, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/3)];
+    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/2.5, 4, frame.CGRectValue.size.width/5, frame.CGRectValue.size.width/5)];
     [icon setContentMode: UIViewContentModeScaleToFill];
     [icon setImage:[UIImage imageNamed:@"timerIcon.png"]];
     [background addSubview:icon];
@@ -92,7 +108,7 @@
 
 - (void)showDistance {
     NSValue *frame = [NSValue valueWithCGRect:CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge)];
-    UIColor *backgroundColor = [UIColor colorWithRed:199.0f/255.0f green:244.0f/255.0f blue:100.0f/255.0f alpha:1.0f];
+    UIColor *backgroundColor = kOrangeColor;
     
     // colored background square
     UIView *background = [[UIView alloc] initWithFrame:frame.CGRectValue];
@@ -100,7 +116,7 @@
     [self.view addSubview:background];
     
     // add icon
-    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 0, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/4)];
+    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 0, frame.CGRectValue.size.width/3, frame.CGRectValue.size.width/3)];
     [icon setContentMode: UIViewContentModeScaleToFill];
     [icon setImage:[UIImage imageNamed:@"roadIcon.png"]];
     [background addSubview:icon];
@@ -124,7 +140,7 @@
 
 - (void)showSpeed {
     NSValue *frame = [NSValue valueWithCGRect:CGRectMake(_boxPadding + _boxEdge, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge)];
-    UIColor *backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:107.0f/255.0f blue:107.0f/255.0f alpha:1.0f];
+    UIColor *backgroundColor = kGreenColor;
     
     // colored background square
     UIView *background = [[UIView alloc] initWithFrame:frame.CGRectValue];
@@ -132,7 +148,7 @@
     [self.view addSubview:background];
     
     // add icon
-    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 0, frame.CGRectValue.size.width/3, frame.CGRectValue.size.height/4)];
+    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(frame.CGRectValue.size.width/3, 0, frame.CGRectValue.size.width/3, frame.CGRectValue.size.width/3)];
     [icon setContentMode: UIViewContentModeScaleToFill];
     [icon setImage:[UIImage imageNamed:@"speedIcon.png"]];
     [background addSubview:icon];
