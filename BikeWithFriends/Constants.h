@@ -9,10 +9,10 @@
 #ifndef BikeWithFriends_Constants_h
 #define BikeWithFriends_Constants_h
 
-#define kBlueColor [UIColor colorWithRed:110.0/255.0 green:144.0/255.0 blue:195.0/255.0 alpha:1.0]
-#define kGreenColor [UIColor colorWithRed:101.0/255.0 green:193.0/255.0 blue:170.0/255.0 alpha:1.0]
-#define kYellowColor [UIColor colorWithRed:255.0/255.0 green:209.0/255.0 blue:133.0/255.0 alpha:1.0]
-#define kOrangeColor [UIColor colorWithRed:255.0/255.0 green:173.0/255.0 blue:133.0/255.0 alpha:1.0]
+#define kRedColor [UIColor colorWithRed:255.0/255.0 green:120.0/255.0 blue:116.0/255.0 alpha:1.0]
+#define kOrangeColor [UIColor colorWithRed:255.0/255.0 green:181.0/255.0 blue:116.0/255.0 alpha:1.0]
+#define kBlueColor [UIColor colorWithRed:99.0/255.0 green:203.0/255.0 blue:213.0/255.0 alpha:1.0]
+#define kGreenColor [UIColor colorWithRed:106.0/255.0 green:232.0/255.0 blue:114.0/255.0 alpha:1.0]
 
 #define kMainFont @"KohinoorDevanagari-Book"
 

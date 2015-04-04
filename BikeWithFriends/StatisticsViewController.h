@@ -14,4 +14,8 @@
 @property (strong, nonatomic) LogsViewController *logsViewController;
 @property (strong, nonatomic) NSMutableArray *rides;
 
+@property (strong, nonatomic) NSArray *segSections;
+@property (strong, nonatomic) UISegmentedControl *segControl;
+@property (strong, nonatomic) UIImageView *graph;
+
 @end

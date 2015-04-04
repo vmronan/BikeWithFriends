@@ -36,14 +36,14 @@
                         [NSValue valueWithCGRect:CGRectMake(_boxPadding, navBarHeight+(2*_boxPadding)+_boxEdge, _boxEdge, _boxEdge)],
                         [NSValue valueWithCGRect:CGRectMake((2*_boxPadding)+_boxEdge, navBarHeight+(2*_boxPadding)+_boxEdge, _boxEdge, _boxEdge)]];
     
-    NSArray *backgroundColors = @[kBlueColor, kYellowColor, kOrangeColor, kGreenColor];
+    NSArray *backgroundColors = @[kBlueColor, kRedColor, kOrangeColor, kGreenColor];
     NSArray *pointsEarneds = @[@11, @7, @1, @9];    // update when points are earned
     NSArray *maxPoints = @[@25, @10, @5, @10];      // update as achievements change
     NSArray *titles = @[[NSString stringWithFormat:@"Bike %@ miles", maxPoints[0]],
                         [NSString stringWithFormat:@"Bike %@ hours", maxPoints[1]],
                         [NSString stringWithFormat:@"Bike with %@ friends", maxPoints[2]],
                         [NSString stringWithFormat:@"Bike %@ times", maxPoints[3]]];
-    NSArray *iconTitles = @[@"bike-icon.png", @"hourglass-icon.png", @"friends-icon.png", @"calendar-icon.png"];
+    NSArray *iconTitles = @[@"icon-bike.png", @"icon-hourglass.png", @"icon-friends.png", @"icon-calendar.png"];
     
     for(int i = 0; i < 4; i++) {
         [self makeAchievementBoxWithFrame:[frames[i] CGRectValue] title:titles[i] backgroundColor:backgroundColors[i] pointsEarned:pointsEarneds[i] maxPoints:maxPoints[i] icon:[UIImage imageNamed:iconTitles[i]]];
