@@ -7,6 +7,7 @@
 //
 
 #import "RequestSetupView.h"
+#import "Constants.h"
 
 @interface RequestSetupView() {
   UIDatePicker* _datePicker;
@@ -66,7 +67,10 @@
       [self addSubview:_notesField];
       
       // Create a button to submit the request
-      [self showSendRequestButton];
+      [self showSendRequestButtonWithFrame:CGRectMake(frameWidth * 0.05,
+                                                      frameHeight * 0.80,
+                                                      frameWidth * 0.90,
+                                                      frameHeight * 0.10)];
     }
   
     return self;
@@ -106,11 +110,11 @@
   [self addSubview:_datePicker];
 }
 
-- (void)showSendRequestButton {
-    UIButton *rideRequestButton = [[UIButton alloc] initWithFrame:CGRectMake(30, 550, 300, 100)];
-    [rideRequestButton setTitle:@"Send request" forState:UIControlStateNormal];
+- (void)showSendRequestButtonWithFrame:(CGRect)frame {
+    UIButton *rideRequestButton = [[UIButton alloc] initWithFrame:frame];
+    [rideRequestButton setTitle:@"Send Request" forState:UIControlStateNormal];
     [rideRequestButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [rideRequestButton setBackgroundColor:[UIColor colorWithRed:0.77 green:0.95 blue:0.39 alpha:1.0]];
+    [rideRequestButton setBackgroundColor:kBlueColor];
     [rideRequestButton addTarget:self action:@selector(sendRequest) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:rideRequestButton];
 }
