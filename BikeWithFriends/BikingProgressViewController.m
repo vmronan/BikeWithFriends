@@ -74,7 +74,6 @@
 
 - (void)showDistance {
     CGRect frame = CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge);
-    NSLog(@"frame width: %f", frame.size.width);
     
     // colored background square
     UIView *background = [[UIView alloc] initWithFrame:frame];
