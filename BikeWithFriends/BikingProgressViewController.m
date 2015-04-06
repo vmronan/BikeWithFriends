@@ -23,8 +23,8 @@
     _navBarHeight = 64;
     _boxPadding = self.view.frame.size.width/22;
     _boxEdge = self.view.frame.size.width*10/22;
-    distance = 6;
-    speed = 10;
+    distance = 0;
+    speed = 5.2;
     isPaused = false;
     
     [super viewDidLoad];
@@ -103,11 +103,11 @@
     
     // add distance traveled
     NSString *distanceString = [NSString stringWithFormat:@"%0.2f", distance];
-    UILabel *distanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height*2/5, frame.size.width, frame.size.height/3)];
-    [distanceLabel setFont:[UIFont fontWithName:kMainFont size:36]];
-    [distanceLabel setText:distanceString];
-    [distanceLabel setTextAlignment:NSTextAlignmentCenter];
-    [background addSubview:distanceLabel];
+    self.distanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height*2/5, frame.size.width, frame.size.height/3)];
+    [self.distanceLabel setFont:[UIFont fontWithName:kMainFont size:36]];
+    [self.distanceLabel setText:distanceString];
+    [self.distanceLabel setTextAlignment:NSTextAlignmentCenter];
+    [background addSubview:self.distanceLabel];
     
     // add title
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height*2/3, frame.size.width, frame.size.height/3)];
@@ -134,12 +134,12 @@
     
     // add speed
     NSString *speedString = [NSString stringWithFormat:@"%0.2f", speed];
-    UILabel *speedLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width/4, frame.size.height*2/5, frame.size.width/2, frame.size.height/3)];
-    [speedLabel setFont:[UIFont fontWithName:kMainFont size:36]];
-    [speedLabel setTextAlignment:NSTextAlignmentCenter];
+    self.speedLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width/4, frame.size.height*2/5, frame.size.width/2, frame.size.height/3)];
+    [self.speedLabel setFont:[UIFont fontWithName:kMainFont size:36]];
+    [self.speedLabel setTextAlignment:NSTextAlignmentCenter];
     
-    [speedLabel setText:speedString];
-    [background addSubview:speedLabel];
+    [self.speedLabel setText:speedString];
+    [background addSubview:self.speedLabel];
     
     // add title
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width/3, frame.size.height*2/3, frame.size.width/3, frame.size.height/3)];
@@ -167,9 +167,21 @@
 - (void)stopWatch {
     if (isPaused == false) {
         ++rideTime;
+        distance = distance + .02;
         minutes = rideTime / 60;
         seconds = rideTime % 60;
         self.timerLabel.text = [NSString stringWithFormat:@"%02ld:%02ld", (long)minutes, (long)seconds];
+        self.distanceLabel.text = [NSString stringWithFormat:@"%0.2f", distance];
+        
+        if (rideTime % 3 == 0) {
+            speed = 5.2;
+            self.speedLabel.text = [NSString stringWithFormat:@"%0.2f", speed];
+        }
+        else {
+            speed = 5.3;
+            self.speedLabel.text = [NSString stringWithFormat:@"%0.2f", speed];
+        }
+        
     }
 }
 
