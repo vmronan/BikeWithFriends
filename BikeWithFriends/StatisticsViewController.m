@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Statistics"];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self showLogsButton];
     [self setupView];
 }

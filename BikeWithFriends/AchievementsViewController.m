@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Achievements"];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self showLevelProgress];
     [self showAchievements];
  }
