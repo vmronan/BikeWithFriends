@@ -15,9 +15,26 @@
     self = [super init];
     if(self) {
         self.cellType = [NSMutableArray arrayWithArray:@[@"rideRequest", @"sentRequest",@"rideRequest", @"sentRequest",@"rideRequest", @"sentRequest"]];
-        self.profilePictures = [NSMutableArray arrayWithArray:@[@"profilePicture1.jpg", @"profilePicture2.jpg", @"profilePicture3.jpg",@"profilePicture1.jpg", @"profilePicture2.jpg", @"profilePicture3.jpg"]];
-        self.notifications = [NSMutableArray arrayWithArray:@[@"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm", @"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm", @"Jenner wants to go biking with you!", @"You invited Vanessa to go biking at 3pm"]];
-        self.descriptions = [NSMutableArray arrayWithArray:@[@"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation:Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd", @"Date: 1/1/2015 \nTime: 4pm \nLocation: Mudd"]];
+        self.profilePictures = [NSMutableArray arrayWithArray:@[@"person-jenner.jpg",
+                                                                @"person-vanessa.jpg",
+                                                                @"person-sam.jpg",
+                                                                @"person-jim.jpg",
+                                                                @"person-george.jpg",
+                                                                @"person-sarah.jpg"]];
+        self.notifications = [NSMutableArray arrayWithArray:@[
+                      @"Jenner wants to go biking with you!",
+                      @"You invited Vanessa to go biking at 3pm",
+                      @"Sam wants to go biking with you!",
+                      @"You invited Jim to go biking at 7pm",
+                      @"George wants to go biking with you!",
+                      @"You invited Sarah to go biking at 2pm"]];
+        self.descriptions = [NSMutableArray arrayWithArray:@[
+                     @"Date: Today \nTime: 4:30 pm \nLocation: Mudd Cafe",
+                     @"Date: Today \nTime: 3pm \nLocation: Atwood",
+                     @"Date: Tomorrow \nTime: 1pm \nLocation: CrossFit",
+                     @"Date: Wednesday \nTime: 7pm \nLocation: Hot Air Balloon Lab",
+                     @"Date: Today \nTime: 11:11am \nLocation: Jim's House",
+                     @"Date: Tomorrow \nTime: 2pm \nLocation: LAC"]];
     }
     
     return self;
