@@ -13,7 +13,9 @@
 @implementation StatisticsViewController
 {
     int _screenWidth;
-    UILabel* _headerLabel;
+    UILabel *_headerLabel;
+    UILabel *_totalDistLabel;
+    UILabel *_totalTimeLabel;
 }
 
 - (void)viewDidLoad {
@@ -52,6 +54,7 @@
 
 - (void)updateGraphAndTotals {
     [self updateGraph];
+    [self updateTotals];
 }
 
 - (void)showGraphWithImageNamed:(NSString *)imageName {
@@ -81,6 +84,33 @@
     }
 }
 
+- (void)updateTotals {
+    NSString *distText;
+    NSString *timeText;
+    switch(self.segControl.selectedSegmentIndex) {
+        case 0:
+            distText = @"1.5";
+            timeText = @"5.9";
+            break;
+        case 1:
+            distText = @"6.3";
+            timeText = @"29";
+            break;
+        case 2:
+            distText = @"37";
+            timeText = @"82";
+            break;
+        case 3:
+            distText = @"115";
+            timeText = @"251";
+            break;
+        default:
+            break;
+    }
+    [_totalDistLabel setText:distText];
+    [_totalTimeLabel setText:timeText];
+}
+
 - (void)showTotals {
     _headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(_screenWidth/20, self.view.frame.size.height/2+110, _screenWidth*9/10, 30)];
     [_headerLabel setTextAlignment:NSTextAlignmentCenter];
@@ -92,22 +122,24 @@
     CGFloat yOffset = self.view.frame.size.height/2+145;
     CGFloat labelWidth = _screenWidth - (3 * xOffset);
     
-    UILabel *totalDistLabel = [[UILabel alloc] initWithFrame:CGRectMake(xOffset, yOffset, labelWidth, 100)];
-    [totalDistLabel setFont:[UIFont fontWithName:kBoldFont size:75]];
-    [totalDistLabel setText:@"5.9"];
-    totalDistLabel.adjustsFontSizeToFitWidth = YES;
-    [self.view addSubview:totalDistLabel];
+    _totalDistLabel = [[UILabel alloc] initWithFrame:CGRectMake(xOffset, yOffset, labelWidth, 100)];
+    [_totalDistLabel setFont:[UIFont fontWithName:kBoldFont size:75]];
+    [_totalDistLabel setText:@"5.9"];
+    [_totalDistLabel setTextColor:kRedColor];
+    _totalDistLabel.adjustsFontSizeToFitWidth = YES;
+    [self.view addSubview:_totalDistLabel];
     
     UILabel *textDistLabel = [[UILabel alloc] initWithFrame:CGRectMake(xOffset, yOffset + 50, labelWidth, 100)];
     [textDistLabel setFont:[UIFont fontWithName:kMainFont size:18]];
     [textDistLabel setText:@"MILES BIKED"];
     [self.view addSubview:textDistLabel];
     
-    UILabel *totalTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(xOffset + labelWidth - (xOffset / 3), yOffset, labelWidth, 100)];
-    [totalTimeLabel setFont:[UIFont fontWithName:kBoldFont size:75]];
-    [totalTimeLabel setText:@"1.5"];
-    totalDistLabel.adjustsFontSizeToFitWidth = YES;
-    [self.view addSubview:totalTimeLabel];
+    _totalTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(xOffset + labelWidth - (xOffset / 3), yOffset, labelWidth, 100)];
+    [_totalTimeLabel setFont:[UIFont fontWithName:kBoldFont size:75]];
+    [_totalTimeLabel setText:@"1.5"];
+    [_totalTimeLabel setTextColor:kRedColor];
+    _totalDistLabel.adjustsFontSizeToFitWidth = YES;
+    [self.view addSubview:_totalTimeLabel];
     
     UILabel *textTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(xOffset + labelWidth - (xOffset / 3) - 5, yOffset + 50, labelWidth, 100)];
     [textTimeLabel setFont:[UIFont fontWithName:kMainFont size:18]];

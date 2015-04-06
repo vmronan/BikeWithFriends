@@ -27,8 +27,6 @@
 }
 
 - (void)customizeNavBarView {
-    NSLog(@"customizing nav bar view");
-    
     // Set title font
     UIFont *navBarTitleFont = [UIFont fontWithName:kMainFont size:20.0];
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObject:navBarTitleFont forKey:NSFontAttributeName]];
