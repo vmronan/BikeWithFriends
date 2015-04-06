@@ -167,7 +167,6 @@
 - (void)stopWatch {
     if (isPaused == false) {
         ++rideTime;
-        distance = distance + .02;
         minutes = rideTime / 60;
         seconds = rideTime % 60;
         self.timerLabel.text = [NSString stringWithFormat:@"%02ld:%02ld", (long)minutes, (long)seconds];
@@ -176,17 +175,24 @@
         if (rideTime % 3 == 0) {
             speed = 5.2;
             self.speedLabel.text = [NSString stringWithFormat:@"%0.2f", speed];
+            distance = distance + .01;
+
         }
         else {
             speed = 5.3;
             self.speedLabel.text = [NSString stringWithFormat:@"%0.2f", speed];
         }
-        
     }
 }
 
 - (void)showAlertView {
-    NSString *message = [NSString stringWithFormat:@"You rode %.02f miles over %02d minutes and %02d seconds. This comes out to an average speed of %.02f miles per hour.", distance, minutes, seconds, speed];
+    NSString *message;
+    if (rideTime < 60) {
+        message = [NSString stringWithFormat:@"You rode %.02f miles over %02d seconds. This comes out to an average speed of %.02f miles per hour.", distance, seconds, speed];
+    }
+    else {
+        message = [NSString stringWithFormat:@"You rode %.02f miles over %02d minutes and %02d seconds. This comes out to an average speed of %.02f miles per hour.", distance, minutes, seconds, speed];
+    }
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Great Ride!" message:message delegate:self cancelButtonTitle:@"Yay!" otherButtonTitles:nil];
     [alert show];
 }
