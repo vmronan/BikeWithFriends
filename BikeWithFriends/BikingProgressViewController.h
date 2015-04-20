@@ -25,6 +25,8 @@
 @property (strong, nonatomic) UILabel *distanceLabel;
 @property (strong, nonatomic) UILabel *speedLabel;
 
+@property (strong, nonatomic) UIAlertView *endRideAlert;
+@property (strong, nonatomic) UIAlertView *cancelRideAlert;
 
 @property (strong, nonatomic) NSTimer *timer;
 

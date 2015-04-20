@@ -32,6 +32,7 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.navigationItem setHidesBackButton:YES];
     [self showLevelProgress];
+    [self showCancelRideButton];
     [self showFinishRideButton];
     [self showPauseRideButton];
     [self showProgress];
@@ -39,6 +40,12 @@
     [self showDistance];
     [self showSpeed];
 }
+
+- (void)showCancelRideButton {
+    UIBarButtonItem *cancelRideButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelRide)];
+    [self.navigationItem setRightBarButtonItem:cancelRideButton];
+}
+
 
 - (void)showLevelProgress {
     int imgWidth = self.view.frame.size.width-20;
@@ -193,16 +200,18 @@
     else {
         message = [NSString stringWithFormat:@"You rode %.02f miles over %02d minutes and %02d seconds. This comes out to an average speed of %.02f miles per hour.", distance, minutes, seconds, speed];
     }
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Great Ride!" message:message delegate:self cancelButtonTitle:@"Yay!" otherButtonTitles:nil];
-    [alert show];
+    _endRideAlert = [[UIAlertView alloc] initWithTitle:@"Great Ride!" message:message delegate:self cancelButtonTitle:@"Yay!" otherButtonTitles:nil];
+    [_endRideAlert show];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
         // send ride data to MainViewController
-        if(_delegate && [_delegate respondsToSelector:@selector(bikingProgressDidDismissWithData:)])
-        {
-            [_delegate bikingProgressDidDismissWithData:self.ride];
+        if (alertView == _endRideAlert) {
+            if(_delegate && [_delegate respondsToSelector:@selector(bikingProgressDidDismissWithData:)])
+            {
+                [_delegate bikingProgressDidDismissWithData:self.ride];
+            }
         }
         [self.navigationController popViewControllerAnimated:YES];
     }
@@ -230,6 +239,13 @@
     
     // Display the alert box
     [self showAlertView];
+}
+
+- (void)cancelRide {
+    NSString *message;
+    message = [NSString stringWithFormat:@"You canceled the ride."];
+    _cancelRideAlert = [[UIAlertView alloc] initWithTitle:@"Ride Canceled" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [_cancelRideAlert show];
 }
 
 

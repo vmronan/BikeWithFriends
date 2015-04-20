@@ -30,11 +30,11 @@
                       @"You invited Sarah to go biking at 2pm"]];
         self.descriptions = [NSMutableArray arrayWithArray:@[
                      @"Date: Today \nTime: 4:30 pm \nLocation: Mudd Cafe",
-                     @"Date: Today \nTime: 3pm \nLocation: Atwood",
-                     @"Date: Tomorrow \nTime: 1pm \nLocation: CrossFit",
+                     @"Date: Tomorrow \nTime: 3pm \nLocation: Atwood",
+                     @"Date: Tomorrow \nTime: 4pm \nLocation: CrossFit",
                      @"Date: Wednesday \nTime: 7pm \nLocation: Hot Air Balloon Lab",
-                     @"Date: Today \nTime: 11:11am \nLocation: Jim's House",
-                     @"Date: Tomorrow \nTime: 2pm \nLocation: LAC"]];
+                     @"Date: Thursday \nTime: 11:11am \nLocation: Jim's House",
+                     @"Date: Thursday \nTime: 2pm \nLocation: LAC"]];
     }
     
     return self;

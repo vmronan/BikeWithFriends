@@ -78,6 +78,11 @@
         [self.rejectButton setImage:[UIImage imageNamed:@"rejectIconRed.png"] forState: UIControlStateNormal];
         [self.acceptButton setImage:[UIImage imageNamed:@"acceptIconGrey.png"] forState: UIControlStateNormal];
     }
+    else {
+        self.rejectButtonOn = true;
+        [self.rejectButton setImage:[UIImage imageNamed:@"rejectIconRed.png"] forState: UIControlStateNormal];
+        [self.acceptButton setImage:[UIImage imageNamed:@"acceptIconGrey.png"] forState: UIControlStateNormal];
+    }
 }
 
 -(void)cancelRideRequest:(id)sender
