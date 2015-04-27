@@ -105,6 +105,7 @@
   // Set the time zone to system time and set current date/time
   [_datePicker setTimeZone:[NSTimeZone systemTimeZone]];
   [_datePicker setDate:[NSDate date]];
+  [_datePicker setMinimumDate:[NSDate date]];
   
   // Add it to the view
   [self addSubview:_datePicker];
