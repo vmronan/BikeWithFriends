@@ -150,7 +150,7 @@
 /*** LOGS ***/
 
 - (void)showLogsButton {
-    UIBarButtonItem *logsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(pushLogsView)];
+    UIBarButtonItem *logsButton = [[UIBarButtonItem alloc] initWithTitle:@"Ride Log" style:UIBarButtonItemStylePlain target:self action:@selector(pushLogsView)];
     [self.navigationItem setRightBarButtonItem:logsButton];
 }
 
