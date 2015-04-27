@@ -224,10 +224,10 @@
     // Stop  or start timer depending on state
     isPaused = !isPaused;
     if (isPaused == true) {
-        [self.pauseRideButton setImage:[UIImage imageNamed:@"playIcon.png"] forState: UIControlStateNormal];
+        [self.pauseRideButton setImage:[UIImage imageNamed:@"playIcon2.png"] forState: UIControlStateNormal];
     }
     else {
-        [self.pauseRideButton setImage:[UIImage imageNamed:@"pauseIcon.png"] forState: UIControlStateNormal];
+        [self.pauseRideButton setImage:[UIImage imageNamed:@"pauseIcon2.png"] forState: UIControlStateNormal];
     }
 }
 
