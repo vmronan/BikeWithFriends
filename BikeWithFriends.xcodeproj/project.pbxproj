@@ -12,6 +12,8 @@
 		264C66FC1AC51DA6009ED889 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 264C66FB1AC51DA6009ED889 /* Friend.m */; };
 		26A004E51AEE0E0400F1AEC3 /* finishIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A004E31AEE0E0400F1AEC3 /* finishIcon2.png */; };
 		26A004E61AEE0E0400F1AEC3 /* pauseIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A004E41AEE0E0400F1AEC3 /* pauseIcon2.png */; };
+		26A343A71AEE1792007AB4B3 /* riderequests.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A343A51AEE1792007AB4B3 /* riderequests.png */; };
+		26A343AA1AEE17F9007AB4B3 /* startbiking.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A343A91AEE17F9007AB4B3 /* startbiking.png */; };
 		26E277491AD08E9B00EDFB7C /* btn-achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E277441AD08E9B00EDFB7C /* btn-achievements.png */; };
 		26E2774A1AD08E9B00EDFB7C /* btn-friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E277451AD08E9B00EDFB7C /* btn-friends.png */; };
 		26E2774B1AD08E9B00EDFB7C /* btn-notifications.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E277461AD08E9B00EDFB7C /* btn-notifications.png */; };
@@ -87,6 +89,8 @@
 		264C66FB1AC51DA6009ED889 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		26A004E31AEE0E0400F1AEC3 /* finishIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finishIcon2.png; sourceTree = "<group>"; };
 		26A004E41AEE0E0400F1AEC3 /* pauseIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseIcon2.png; sourceTree = "<group>"; };
+		26A343A51AEE1792007AB4B3 /* riderequests.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = riderequests.png; sourceTree = "<group>"; };
+		26A343A91AEE17F9007AB4B3 /* startbiking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startbiking.png; sourceTree = "<group>"; };
 		26E277441AD08E9B00EDFB7C /* btn-achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-achievements.png"; sourceTree = "<group>"; };
 		26E277451AD08E9B00EDFB7C /* btn-friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-friends.png"; sourceTree = "<group>"; };
 		26E277461AD08E9B00EDFB7C /* btn-notifications.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-notifications.png"; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 		870185351ACF45E0003846DC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				26A343A91AEE17F9007AB4B3 /* startbiking.png */,
+				26A343A51AEE1792007AB4B3 /* riderequests.png */,
 				26A004E31AEE0E0400F1AEC3 /* finishIcon2.png */,
 				26A004E41AEE0E0400F1AEC3 /* pauseIcon2.png */,
 				8737BCEE1AD0917A00EFCC7E /* playIcon.png */,
@@ -488,9 +494,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A343AA1AEE17F9007AB4B3 /* startbiking.png in Resources */,
 				8737BD001AD0917A00EFCC7E /* speedIcon.png in Resources */,
 				8737BCF91AD0917A00EFCC7E /* profilePicture1.jpg in Resources */,
 				264C66F91AC5176F009ED889 /* friends.txt in Resources */,
+				26A343A71AEE1792007AB4B3 /* riderequests.png in Resources */,
 				87A568B21AB2457C0032D26F /* Main.storyboard in Resources */,
 				8737BCEC1AD0917000EFCC7E /* finishIcon.png in Resources */,
 				8737BCEA1AD0917000EFCC7E /* cancelIcon.png in Resources */,

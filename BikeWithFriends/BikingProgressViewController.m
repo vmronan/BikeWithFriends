@@ -16,13 +16,15 @@
     int _navBarHeight;
     int _progressImageHeight;
     int _boxPadding;
-    int _boxEdge;
+    int _boxEdgeWidth;
+    int _boxEdgeHeight;
 }
 
 - (void)viewDidLoad {
     _navBarHeight = 64;
     _boxPadding = self.view.frame.size.width/22;
-    _boxEdge = self.view.frame.size.width*10/22;
+    _boxEdgeWidth = self.view.frame.size.width*10/22;
+    _boxEdgeHeight = self.view.frame.size.width*10/24;
     distance = 0;
     speed = 5.2;
     isPaused = false;
@@ -73,7 +75,7 @@
 - (void)showTimer {
     rideTime = 0;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(stopWatch) userInfo:nil repeats:YES];
-    CGRect frame = CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight, _boxEdge * 2, _boxEdge);
+    CGRect frame = CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight, _boxEdgeWidth * 2, _boxEdgeHeight);
     
     // colored background square
     UIView *background = [[UIView alloc] initWithFrame:frame];
@@ -95,7 +97,7 @@
 }
 
 - (void)showDistance {
-    CGRect frame = CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge);
+    CGRect frame = CGRectMake(_boxPadding, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdgeHeight, _boxEdgeWidth, _boxEdgeHeight);
     
     // colored background square
     UIView *background = [[UIView alloc] initWithFrame:frame];
@@ -126,7 +128,7 @@
 }
 
 - (void)showSpeed {
-    CGRect frame = CGRectMake(_boxPadding + _boxEdge, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdge, _boxEdge, _boxEdge);
+    CGRect frame = CGRectMake(_boxPadding + _boxEdgeWidth, _navBarHeight + _boxPadding + _progressImageHeight + _boxEdgeHeight, _boxEdgeWidth, _boxEdgeHeight);
     
     // colored background square
     UIView *background = [[UIView alloc] initWithFrame:frame];
@@ -157,7 +159,7 @@
 }
 
 - (void)showPauseRideButton {
-    self.pauseRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdge * 2, _boxEdge/2, _boxEdge/2)];
+    self.pauseRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdgeHeight * 2, _boxEdgeWidth/2, _boxEdgeHeight/2 + _boxEdgeWidth/7)];
     [self.pauseRideButton setImage:[UIImage imageNamed:@"pauseIcon2.png"] forState: UIControlStateNormal];
     [self.pauseRideButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.pauseRideButton addTarget:self action:@selector(pauseRide) forControlEvents:UIControlEventTouchUpInside];
@@ -165,7 +167,7 @@
 }
 
 - (void)showFinishRideButton {
-    self.endRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4 + _boxEdge, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdge * 2, _boxEdge/2, _boxEdge/2)];
+    self.endRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4 + _boxEdgeWidth, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdgeHeight * 2, _boxEdgeWidth/2, _boxEdgeHeight/2 + _boxEdgeWidth/7)];
     [self.endRideButton setImage:[UIImage imageNamed:@"finishIcon2.png"] forState: UIControlStateNormal];
     [self.endRideButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.endRideButton addTarget:self action:@selector(endRide) forControlEvents:UIControlEventTouchUpInside];

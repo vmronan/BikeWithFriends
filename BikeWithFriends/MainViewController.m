@@ -68,11 +68,13 @@
     CGFloat buttonYOffset = navSectionYOffset;
     CGFloat buttonWidth = navSectionWidth;
     CGFloat buttonHeight = navSectionHeight / 4.5;
-    CGRect buttonFrame = CGRectMake(buttonXOffset, buttonYOffset, buttonWidth, buttonHeight);
+    CGFloat startButtonHeight = navSectionHeight / 3;
+    CGRect buttonFrame = CGRectMake(buttonXOffset, buttonYOffset, buttonWidth, startButtonHeight);
     [self displayStartBikingButtonWithFrame:buttonFrame];
+    NSLog(@"button width, height: %f, %f", buttonWidth, startButtonHeight);
     
     // Notifications -----
-    buttonYOffset += buttonHeight + buttonYPadding;
+    buttonYOffset += startButtonHeight + buttonYPadding;
     buttonWidth = (navSectionWidth / 2) - (buttonXPadding / 2);
     buttonFrame = CGRectMake(buttonXOffset, buttonYOffset, buttonWidth, buttonHeight);
     [self displayNotificationsButtonWithFrame:buttonFrame];
@@ -95,14 +97,14 @@
 
 - (void)displayStartBikingButtonWithFrame:(CGRect)frame {
     self.startBikingButton = [[UIButton alloc] initWithFrame:frame];
-    [self.startBikingButton setBackgroundImage:[UIImage imageNamed:@"btn-startbiking"] forState:UIControlStateNormal];
+    [self.startBikingButton setBackgroundImage:[UIImage imageNamed:@"startbiking"] forState:UIControlStateNormal];
     [self.startBikingButton addTarget:self action:@selector(pushBikingProgressView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.startBikingButton];
 }
 
 - (void)displayNotificationsButtonWithFrame:(CGRect)frame {
     self.notificationsButton = [[UIButton alloc] initWithFrame:frame];
-    [self.notificationsButton setBackgroundImage:[UIImage imageNamed:@"btn-notifications"] forState:UIControlStateNormal];
+    [self.notificationsButton setBackgroundImage:[UIImage imageNamed:@"riderequests"] forState:UIControlStateNormal];
     [self.notificationsButton addTarget:self action:@selector(pushNotificationsView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.notificationsButton];
 }
