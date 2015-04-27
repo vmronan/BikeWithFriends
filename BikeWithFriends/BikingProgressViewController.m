@@ -158,7 +158,7 @@
 
 - (void)showPauseRideButton {
     self.pauseRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdge * 2, _boxEdge/2, _boxEdge/2)];
-    [self.pauseRideButton setImage:[UIImage imageNamed:@"pauseIcon.png"] forState: UIControlStateNormal];
+    [self.pauseRideButton setImage:[UIImage imageNamed:@"pauseIcon2.png"] forState: UIControlStateNormal];
     [self.pauseRideButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.pauseRideButton addTarget:self action:@selector(pauseRide) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.pauseRideButton];
@@ -166,7 +166,7 @@
 
 - (void)showFinishRideButton {
     self.endRideButton = [[UIButton alloc] initWithFrame:CGRectMake(_boxPadding * 4 + _boxEdge, _navBarHeight + _boxPadding * 2 + _progressImageHeight + _boxEdge * 2, _boxEdge/2, _boxEdge/2)];
-    [self.endRideButton setImage:[UIImage imageNamed:@"finishIcon.png"] forState: UIControlStateNormal];
+    [self.endRideButton setImage:[UIImage imageNamed:@"finishIcon2.png"] forState: UIControlStateNormal];
     [self.endRideButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.endRideButton addTarget:self action:@selector(endRide) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.endRideButton];
