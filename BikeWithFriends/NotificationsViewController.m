@@ -42,7 +42,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Notifications"];
+    [self setTitle:@"Ride Requests"];
 }
 
 - (void)didReceiveMemoryWarning {
